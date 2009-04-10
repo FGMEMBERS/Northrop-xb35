@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="xb35-jsbsim-cnf.xml"> -->
+<PropertyList include="xb35-yasim-cnf.xml">
+
+  <sim>
+    <description>Northrop XB 35</description>
+    <author>Emmanuel BARANGER (3D)</author>
+  </sim>
+
+</PropertyList>
+

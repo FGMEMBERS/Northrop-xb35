@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Based on picture here : http://www.ricksdecals.com/main/page_instrument_panels_instrument_panels.html -->
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+    <object-name>agrafes</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- AI -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.113 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.318 </y-m>
+      <z-m> -0.008 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ALT -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.203 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.228 </y-m>
+      <z-m> -0.008 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.036 </y-m>
+      <z-m>  0.012 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm2.xml</path>
+    <offsets>
+      <x-m> 0.015 </x-m>
+      <y-m> 0.026 </y-m>
+      <z-m> 0.012 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.036 </y-m>
+      <z-m> -0.058 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.026 </y-m>
+      <z-m> -0.058 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.098 </y-m>
+      <z-m> -0.023 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m> 0.015 </x-m>
+      <y-m> 0.334 </y-m>
+      <z-m> 0.080 </z-m>
+    </offsets>
+  </model>
+
+  <!-- COMPASS -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.038 </y-m>
+      <z-m>  0.082 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.278 </y-m>
+      <z-m>  0.059 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.091 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+

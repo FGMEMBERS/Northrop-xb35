@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <sound>
+      <path>Aircraft/Northrop-xb35/Sounds/xb35-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Northrop-xb35/Models/xb35.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <startup>
+     <splash-texture>Aircraft/Northrop-xb35/xb35-splash.png</splash-texture>
+    </startup>
+  
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int" n="0">0</int>
+        <int type="int" n="1">0</int>
+        <int type="int" n="2">0</int>
+        <int type="int" n="3">0</int>
+        <int type="int" n="4">0</int>
+        <int type="int" n="5">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Northrop XB 35</title>
+    </help>
+
+    <menubar include="Dialogs/xb35-menu.xml"/>
+
+    <systems>
+      <electrical>
+        <path></path>
+      </electrical>
+    </systems>
+
+  </sim>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="3">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <level-gal_us archive="y">20</level-gal_us>
+      </tank>
+      <tank n="1">
+        <level-gal_us archive="y">20</level-gal_us>
+      </tank>
+      <tank n="2">
+        <level-gal_us archive="y">15</level-gal_us>
+      </tank>
+      <tank n="3">
+        <level-gal_us archive="y">15</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+ 
+  <engines>
+    <engine n="0">
+      <rpm>150</rpm>
+    </engine>
+    <engine n="1">
+      <rpm>150</rpm>
+    </engine>
+    <engine n="2">
+      <rpm>150</rpm>
+    </engine>
+    <engine n="3">
+      <rpm>150</rpm>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/xb35-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <xb35>
+      <file>Aircraft/Northrop-xb35/Nasal/liveries.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/doors.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/light.nas</file>
+    </xb35>
+  </nasal>
+  
+</PropertyList>
