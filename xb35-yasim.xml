@@ -117,7 +117,7 @@
   <!-- multilication du moment par 2 et contra � 1 pour simuler les deux h�lices contra rotative par moteur ???? -->
   <propeller  x="-6.90" y="9.13" z="0.50"
             	mass="2700" 
-		moment="220" 
+		moment="50" 
 		radius="2.5" 
 		cruise-speed="297"
 		cruise-rpm="945"
@@ -149,7 +149,7 @@
   <!-- Moteur intérieur gauche. Hélice 2 xp x = -5.210 -->
   <propeller  x="-6.79" y="4.17" z="0.15"
             	mass="2700" 
-	    	moment="220" 
+	    	moment="50" 
 		radius="2.5" 
 		cruise-speed="297"
 		cruise-rpm="945"
@@ -181,7 +181,7 @@
   <!-- Moteur intérieur droit. Hélice 2 xp x = -5.210 -->
   <propeller  x="-6.79" y="-4.17" z="0.15"
             	mass="2700" 
-		moment="220" 
+		moment="50" 
 		radius="2.5" 
 		cruise-speed="297"
 		cruise-rpm="945"
@@ -213,7 +213,7 @@
   <!-- Moteur extérieur droit. Hélice 2 xp x = -6.098 -->
   <propeller  x="-6.90" y="-9.13" z="0.50"
                 mass="2700" 
-		moment="220" 
+		moment="50" 
 		radius="2.5" 
 		cruise-speed="297"
 		cruise-rpm="945"

@@ -198,7 +198,6 @@
     <object-name>heliceDI2</object-name>
     <object-name>heliceDE2</object-name>
 
-
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
