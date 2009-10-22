@@ -72,7 +72,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm3.xml</path>
     <offsets>
       <x-m>  0.015 </x-m>
       <y-m> -0.036 </y-m>
@@ -81,7 +81,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm4.xml</path>
     <offsets>
       <x-m>  0.015 </x-m>
       <y-m>  0.026 </y-m>
