@@ -1,5 +1,5 @@
-April, 10, 2009
+January, 16, 2010
 
-The FDM is that of B29 modified. It is obvious that the FDM is not correct.
-The next step is the creation of a correct FDM
+After the fantastic work of Adrian NOVOTNY I must now remake the landing gear.
 
+find out why the autopilot is activated by default, which is inconvenient.

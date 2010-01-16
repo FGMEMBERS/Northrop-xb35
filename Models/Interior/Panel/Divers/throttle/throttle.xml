@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>throttle.ac</path>
+
+  <!-- Manette moteur N°1 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>moteur1</object-name>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind>  1.0 </ind><dep> -99.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m> -0.112 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette moteur N°2 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>moteur2</object-name>
+    <property>/controls/engines/engine[1]/throttle</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -99.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m>  0.101 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette moteur N°3 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>moteur3</object-name>
+    <property>/controls/engines/engine[2]/throttle</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -99.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m> -0.056 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette moteur N°4 -->
+  <animation>
+    <type>rotate</type>
+    <object-name>moteur4</object-name>
+    <property>/controls/engines/engine[3]/throttle</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> -99.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m> -0.044 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation>
+
+  <!-- Manette pas variable hélice N°1 
+  <animation>
+    <type>rotate</type>
+    <object-name>helice1</object-name>
+    <property>/controls/engines/engine[0]/propeller-pitch</property>
+    <interpolation>
+      <entry><ind> 1.0 </ind><dep> 50.0 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m>  0.022 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation> -->
+
+  <!-- Manette pas variable hélice N°2 
+  <animation>
+    <type>rotate</type>
+    <object-name>helice2</object-name>
+    <property>/controls/engines/engine[1]/propeller-pitch</property>
+    <interpolation>
+      <entry><ind> 1.0 </ind><dep> 50.0 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m>  0.055 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation> -->
+ 
+  <!-- Manette pas variable hélice N°3 
+  <animation>
+    <type>rotate</type>
+    <object-name>helice3</object-name>
+    <property>/controls/engines/engine[2]/propeller-pitch</property>
+    <interpolation>
+      <entry><ind> 1.0 </ind><dep> 50.0 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m>  0.087 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation> -->
+ 
+  <!-- Manette pas variable hélice N°4 
+  <animation>
+    <type>rotate</type>
+    <object-name>helice4</object-name>
+    <property>/controls/engines/engine[3]/propeller-pitch</property>
+    <interpolation>
+      <entry><ind> 1.0 </ind><dep> 50.0 </dep></entry>
+      <entry><ind> 0.0 </ind><dep>   0.0 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.017 </x-m>
+      <y-m>  0.120 </y-m>
+      <z-m> -0.180 </z-m>
+    </center>
+    <axis>
+      <x> 0.0 </x>
+      <y> 1.0 </y>
+      <z> 0.0 </z>
+    </axis>
+  </animation> -->
+
+</PropertyList>

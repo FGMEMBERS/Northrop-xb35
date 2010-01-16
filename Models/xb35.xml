@@ -87,7 +87,7 @@
     <object-name>propblurDI2</object-name>
     <object-name>propdiscDE2</object-name>
   </animation>
-  
+
   <animation>
     <type>noshadow</type>
     <object-name>verriere</object-name>
@@ -232,6 +232,99 @@
 -->
   </animation>
 
+  <!-- Traine Centrale -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/wake.xml</path>
+    <offsets>
+      <x-m>  2.875 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Traine flotteur gauche -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/wakeG.xml</path>
+    <offsets>
+      <x-m> -0.195 </x-m>
+      <y-m> -3.790 </y-m>
+      <z-m>  0.000 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Traine flotteur droite -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/wakeD.xml</path>
+    <offsets>
+      <x-m> -0.195 </x-m>
+      <y-m>  3.790 </y-m>
+      <z-m>  0.000 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -45 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/tiptrail.xml</path>
+    <offsets>
+      <x-m>   9.0 </x-m>
+      <y-m> -26.1 </y-m>
+      <z-m>   1.0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/tiptrail.xml</path>
+    <offsets>
+      <x-m>  9.0 </x-m>
+      <y-m> 26.1 </y-m>
+      <z-m>  1.0 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
+    <name>tyre-smoke-n</name>
+    <offsets>
+      <x-m> -7.276 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -2.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path>
+    <name>tyre-smoke-p</name>
+    <offsets>
+      <x-m> -0.201 </x-m>
+      <y-m>  6.204 </y-m>
+      <z-m> -2.000 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
+    <name>tyre-smoke-s</name>
+    <offsets>
+      <x-m> -0.201 </x-m>
+      <y-m> -2.957 </y-m>
+      <z-m> -2.000 </z-m>
+    </offsets>
+  </model>
+
   <!-- Une ombre pour OSG -->
   <model>
     <name>shadowOSG</name>
@@ -282,7 +375,7 @@
     <and>
       <greater-than>
         <property>engines/engine[0]/rpm</property>
-        <value>600.000</value>
+        <value>20000000.000</value>
       </greater-than>
       <less-than>
         <property>engines/engine[0]/rpm</property>
@@ -341,7 +434,7 @@
       <z> 1.201606 </z>
     </axis>
   </animation>
-  
+
   <!-- Moteur 2 intérieur gauche -->
   <animation>
     <type>select</type>
@@ -363,7 +456,7 @@
     <and>
       <greater-than>
         <property>engines/engine[1]/rpm</property>
-        <value>600.000</value>
+        <value>0.000</value>
       </greater-than>
       <less-than>
         <property>engines/engine[1]/rpm</property>
@@ -444,7 +537,7 @@
     <and>
       <greater-than>
         <property>engines/engine[2]/rpm</property>
-        <value>600.000</value>
+        <value>0.000</value>
       </greater-than>
       <less-than>
         <property>engines/engine[2]/rpm</property>
@@ -525,7 +618,7 @@
     <and>
       <greater-than>
         <property>engines/engine[3]/rpm</property>
-        <value>600.000</value>
+        <value>0.000</value>
       </greater-than>
       <less-than>
         <property>engines/engine[3]/rpm</property>
@@ -762,9 +855,9 @@
     <property>gear/gear[0]/compression-norm</property>
     <factor>0.3</factor>
     <axis>
-      <x>0.094</x>
-      <y>0</y>
-      <z>0.425</z>
+      <x> 0.094 </x>
+      <y> 0.000 </y>
+      <z> 0.425 </z>
     </axis>
   </animation>
 
@@ -777,9 +870,9 @@
      <entry><ind> 1 </ind><dep> 0.300 </dep></entry>
    </interpolation>
    <axis>
-     <x> 0.000 </x>
-     <y> 0.000 </y>
-     <z> 1.000 </z>
+     <x> 0 </x>
+     <y> 0 </y>
+     <z> 1 </z>
    </axis>
  </animation>
 
@@ -792,17 +885,22 @@
       <entry><ind> 1 </ind><dep> 0.300 </dep></entry>
     </interpolation>
     <axis>
-      <x> 0.000 </x>
-      <y> 0.000 </y>
-      <z> 1.000 </z>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
   <!-- Rentrée des roues -->
   <animation>
-    <type>rotate</type>
+    <name>TrainAvant</name>
     <object-name>axeA</object-name>
     <object-name>roueA</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainAvant</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
@@ -814,16 +912,15 @@
       <z-m> -0.702 </z-m>
     </center>
     <axis>
-      <x> 1.000 </x>
-      <y> 0.000 </y>
-      <z> 0.000 </z>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>axeA</object-name>
-    <object-name>roueA</object-name>
+    <object-name>TrainAvant</object-name>
     <property>gear/gear[0]/position-norm</property>
     <interpolation>
       <entry><ind> 1 </ind><dep>   0 </dep></entry>
@@ -835,16 +932,21 @@
       <z-m> -0.702 </z-m>
     </center>
     <axis>
-      <x>  0.000 </x>
-      <y>  1.000 </y>
-      <z>  0.000 </z>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
   <animation>
-    <type>translate</type>
+    <name>TrainGauche</name>
     <object-name>axeG</object-name>
     <object-name>roueG</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind> 1.00 </ind><dep> 0.00 </dep></entry>
@@ -852,16 +954,15 @@
       <entry><ind> 0.00 </ind><dep> 0.60 </dep></entry>
     </interpolation>
     <axis>
-      <x> 0.000 </x>
-      <y> 0.000 </y>
-      <z> 1.000 </z>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>axeG</object-name>
-    <object-name>roueG</object-name>
+    <object-name>TrainGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
       <entry><ind> 1.00 </ind><dep>  0 </dep></entry>
@@ -874,16 +975,21 @@
       <z-m> -0.810 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
 
   <animation>
-    <type>translate</type>
+    <name>TrainDroit</name>
     <object-name>axeD</object-name>
     <object-name>roueD</object-name>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>TrainDroit</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 1.00 </ind><dep> 0.00 </dep></entry>
@@ -891,16 +997,15 @@
       <entry><ind> 0.00 </ind><dep> 0.60 </dep></entry>
     </interpolation>
     <axis>
-      <x> 0.000 </x>
-      <y> 0.000 </y>
-      <z> 1.000 </z>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
   <animation>
     <type>rotate</type>
-    <object-name>axeD</object-name>
-    <object-name>roueD</object-name>
+    <object-name>TrainDroit</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
       <entry><ind> 1.00 </ind><dep>  0 </dep></entry>
@@ -913,12 +1018,11 @@
       <z-m> -0.810 </z-m>
     </center>
     <axis>
-      <x> 0.000 </x>
-      <y> 1.000 </y>
-      <z> 0.000 </z>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
     </axis>
   </animation>
-
 
   <!-- Fermeture des portes des trains -->
   <animation>
@@ -1148,9 +1252,9 @@
      <z-m> -2.488 </z-m>
    </center>
    <axis>
-     <x> 0.000 </x>
-     <y> 0.000 </y>
-     <z> 1.000 </z>
+     <x> 0 </x>
+     <y> 0 </y>
+     <z> 1 </z>
    </axis>
  </animation>
 
@@ -1166,9 +1270,9 @@
      <z-m> -2.488 </z-m>
    </center>
    <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
+     <x>  0 </x>
+     <y> -1 </y>
+     <z>  0 </z>
    </axis>
  </animation>
 
@@ -1183,9 +1287,9 @@
      <z-m> -2.185 </z-m>
    </center>
    <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
+     <x>  0 </x>
+     <y> -1 </y>
+     <z>  0 </z>
    </axis>
  </animation>
 
@@ -1200,9 +1304,9 @@
      <z-m> -2.185 </z-m>
    </center>
    <axis>
-     <x>  0.000 </x>
-     <y> -1.000 </y>
-     <z>  0.000 </z>
+     <x>  0 </x>
+     <y> -1 </y>
+     <z>  0 </z>
    </axis>
  </animation>
 

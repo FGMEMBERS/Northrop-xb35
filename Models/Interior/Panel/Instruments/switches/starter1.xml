@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>starter.ac</path>
+
+  <animation>
+    <type>material</type>
+    <object-name>SwitchNut</object-name>
+    <object-name>Switch-Starter</object-name>
+    <object-name>Circle</object-name>
+    <emission>
+      <red>   1.0 </red>
+      <green> 0.2 </green>
+      <blue>  0.0 </blue>
+      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>Switch-Starter</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/controls/switches/starter</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>controls.startEngine()</script>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>/controls/switches/starter</property>
+          <value type="int">0</value>
+        </binding>
+        <binding>
+          <command>nasal</command>
+          <script>props.setAll("/controls/engines/engine", "starter", 1)</script>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>Switch-Starter</object-name>
+    <property>controls/switches/starter</property>
+    <factor>0.005</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+<!--<animation>
+	18:11 <syd>     <type>pick</type>
+		18:11 <syd>     <visible>true</visible>
+			18:11 <syd>     <object-name>Switch-Starter</object-name>
+				18:11 <syd>     <action>
+						18:11 <syd>       <button>0</button>
+							18:11 <syd>       <repeatable>false</repeatable>
+								18:11 <syd>       <binding>
+										18:11 <syd>         <command>property-assign</command>
+										18:11 <syd>         <property>controls/switches/starter</property>
+										18:11 <syd>         <value type="int">1</value>
+										18:11 <syd>       </binding>
+										<binding>
+										18:11 <syd>         <command>nasal</command>
+										18:11 <syd>         <script>controls.startEngine(1)</script>
+										18:11 <syd>       </binding>
+										18:11 <syd>       <mod-up>
+										18:11 <syd>         <binding>
+										18:11 <syd>           <command>property-assign</command>
+										18:11 <syd>           <property>/controls/switches/starter</property>
+										18:11 <syd>           <value type="int">0</value>
+										18:11 <syd>         </binding>
+										18:11 <syd>         <binding>
+										<command>nasal</command>
+										18:12 <syd>           <script>controls.startEngine(1)</script>
+										18:12 <syd>         </binding>
+										18:12 <syd>       </mod-up>
+										18:12 <syd>     </action>
+										18:12 <syd>   </animation>
+-->

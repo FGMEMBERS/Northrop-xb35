@@ -102,7 +102,7 @@
 
   <vstab x="-7" y="24" z="-1.174"
          chord="2"
-         length="3"
+         length="10"
          taper="1"> 
          <stall aoa="14" width="2" peak="1.5"/>
          <flap0 start="0.1" end="0.95" lift="1.7" drag="1.5"/>
@@ -115,7 +115,7 @@
 
   <vstab x="-7" y="-24" z="-1.174"
          chord="2"
-         length="3"
+         length="10"
          taper="1"> 
          <stall aoa="14" width="2" peak="1.5"/>
          <flap0 start="0.1" end="0.95" lift="1.7" drag="1.5"/>
@@ -131,19 +131,19 @@
   <!-- multilication du moment par 2 et contra a 1 pour simuler les deux helices contra rotative par moteur ???? -->
   <propeller x="-4.921" y="9.224" z="0.821"
              mass="2700" 
-	     moment="5" 
+	     moment="3" 
 	     radius="2.25" 
 	     cruise-speed="297"
 	     cruise-rpm="945"
 	     cruise-power="2200"
 	     cruise-alt="5000"
-	     min-rpm="210" 
+	     min-rpm="0" 
 	     max-rpm="945"
 	     gear-ratio="0.35"
 	     contra="1"> 
              <actionpt x="-6.462" y="9.224" z="1.121"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="2400" 
+             <piston-engine eng-power="3000" 
                             eng-rpm="2700"
     	                    displacement="3350"
 	                    compression="6.85"
@@ -160,19 +160,19 @@
   <!-- Moteur interieur gauche. Helice 2 xp x = -5.210 -->
   <propeller x="-4.056" y="3.876" z="0.805"
              mass="2700" 
-             moment="5" 
+             moment="3" 
              radius="2.25" 
              cruise-speed="297"
              cruise-rpm="945"
              cruise-power="2200"
              cruise-alt="5000"
-             min-rpm="210" 
+             min-rpm="0" 
              max-rpm="945"
              gear-ratio="0.35"
              contra="1"> 
              <actionpt x="-5.647" y="3.876" z="1.15"/>
              <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="2400" 
+             <piston-engine eng-power="3000" 
                             eng-rpm="2700"
                             displacement="3350"
                             compression="6.85"
@@ -189,19 +189,19 @@
   <!-- Moteur interieur droit. Helice 2 xp x = -5.210 -->
   <propeller x="-4.056" y="-3.876" z="0.805"
              mass="2700" 
-             moment="5" 
+             moment="3" 
              radius="2.25" 
              cruise-speed="297"
              cruise-rpm="945"
              cruise-power="2200"
              cruise-alt="0"
-             min-rpm="210" 
+             min-rpm="0" 
              max-rpm="945"
              gear-ratio="0.35"
              contra="1"> 
              <actionpt x="-5.647" y="-3.876" z="1.15"/>
              <control-input axis="/controls/engines/engine[2]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="2400" 
+             <piston-engine eng-power="3000" 
                             eng-rpm="2700"
                             displacement="3350"
                             compression="6.85"
@@ -219,19 +219,19 @@
   <!-- Moteur exterieur droit. Helice 2 xp x = -6.098 -->
   <propeller x="-4.921" y="-9.224" z="0.821"
              mass="2700" 
-             moment="5" 
+             moment="3" 
              radius="2.5" 
              cruise-speed="297"
              cruise-rpm="945"
              cruise-power="2200"
              cruise-alt="0"
-             min-rpm="210" 
+             min-rpm="0" 
              max-rpm="945"
              gear-ratio="0.35"
              contra="1"> 
              <actionpt x="-6.462" y="-9.224" z="1.121"/>
              <control-input axis="/controls/engines/engine[3]/propeller-pitch" control="ADVANCE"/>
-             <piston-engine eng-power="2400"
+             <piston-engine eng-power="3000"
                             eng-rpm="2700"
                             displacement="3350"
                             compression="6.85"
@@ -259,7 +259,7 @@
   </gear>
 
   <!-- rear left -->
-  <gear x="-0.201" y="6.204" z="-2.957"
+  <gear x="-0.201" y="6.204" z="-3.3"
         retract-time="7"
         compression="0.9"
         spring="1.2">
@@ -271,7 +271,7 @@
   </gear>
 
   <!-- rear right -->
-  <gear x="-0.201" y="-6.204" z="-2.957"
+  <gear x="-0.201" y="-6.204" z="-3.3"
         retract-time="7"
         compression="0.9"
         spring="1.2">
@@ -280,6 +280,48 @@
         <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
         <control-speed control="EXTEND" transition-time="7"/>
         <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
+  </gear>
+
+  <!-- Flotteur gauche -->
+  <gear x="5.0" y="-10.790" z="-1.0"
+        compression="0.5"  
+        spring="10"
+        damp="8"
+        sfric="1"
+        dfric="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="10"
+        spring-factor-not-planing="0.7">
+  </gear>
+
+ <!-- Flotteur gauche -->
+  <gear x="10.0" y="-0.0" z="-1.0"
+        compression="0.5"  
+        spring="10"
+        damp="0"
+        sfric="1"
+        dfric="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="10"
+        spring-factor-not-planing="0.7">
+  </gear>
+
+  <!-- Flotteur droit -->
+  <gear x="5.0" y="10.790" z="-1.0"
+        compression="10"
+        spring="10"
+        damp="8"
+        sfric="1"
+        dfric="1"
+        on-water="1"
+        on-solid="0"
+        reduce-friction-by-extension="1.25"
+        speed-planing="10"
+        spring-factor-not-planing="0.7">
   </gear>
 
   <!--Fuel Tanks -->
@@ -298,5 +340,6 @@
   <!-- Ballast -->
   <ballast x="11.6" y="0" z="-2" mass="14500"/>
   <ballast x="-6" y="0" z="0" mass="-4500"/>
+  <ballast x="15" y="0" z="0" mass="1700"/>
 
 </airplane>

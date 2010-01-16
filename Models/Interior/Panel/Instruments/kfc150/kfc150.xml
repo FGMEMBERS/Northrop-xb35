@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<!-- KFC 150 
+Bendix/King KFC150 autopilot/flightdirector controller
+Syd Adams
+-->
+<PropertyList>
+
+    <path>kfc150.ac</path>
+
+    <animation>
+        <type>select</type>
+        <object-name>FD.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/fd</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>ALT.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/alt</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>HDG.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/hdg</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>NAV.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/nav</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>APR.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/apr</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>BC.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/bc</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>Trim.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/trim-fail</property>
+        </condition>
+    </animation>
+
+    <animation>
+        <type>select</type>
+        <object-name>AP.annun</object-name>
+        <condition>
+            <property>instrumentation/kfc150/annunciators/AP</property>
+        </condition>
+    </animation>
+
+<!-- Hotspots-->
+
+    <animation>
+        <type>pick</type>
+        <object-name>PITCH.dn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("pitch-down");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>PITCH.up</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("pitch-up");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>FD.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("fd");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>ALT.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("alt");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>HDG.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("hdg");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>NAV.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("nav");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>APR.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("apr");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>BC.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>property-toggle</command>
+                <property>instrumentation/nav/back-course-btn</property>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>TEST.btn</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("test");</script>
+            </binding>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>AP.eng</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>king.kfc150.set_mode("AP");</script>
+            </binding>
+        </action>
+    </animation>
+
+
+</PropertyList>

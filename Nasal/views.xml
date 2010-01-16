@@ -11,7 +11,7 @@
     <config>
       <from-model type="bool">true</from-model>
       <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
-      <x-offset-m archive="y">  1.039 </x-offset-m>	<!-- left-/right+ -->
+      <x-offset-m archive="y">  0.639 </x-offset-m>	<!-- left-/right+ -->
       <y-offset-m archive="y">  0.232 </y-offset-m>	<!-- up+/down- -->
       <z-offset-m archive="y"> -5.745 </z-offset-m>	<!-- back+ -->
       <pitch-offset-deg> 0 </pitch-offset-deg>
@@ -49,6 +49,22 @@
       <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
       <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up-->
       <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back-->
+      <default-field-of-view-deg type="double">50</default-field-of-view-deg>
+    </config>
+  </view>
+
+ <view n="103">
+    <name>Flight Engineer</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <pitch-offset-deg>-5</pitch-offset-deg>
+      <x-offset-m archive="y"> 0 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y"> 0.35 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> -3.96 </z-offset-m> <!--Back-->
       <default-field-of-view-deg type="double">50</default-field-of-view-deg>
     </config>
   </view>

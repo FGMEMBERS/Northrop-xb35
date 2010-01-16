@@ -4,7 +4,7 @@
 
   <sim include="Nasal/views.xml">
 
-    <author>BARANGER Emmanuel (3D)</author>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -24,7 +24,7 @@
     <startup>
      <splash-texture>Aircraft/Northrop-xb35/xb35-splash.png</splash-texture>
     </startup>
-  
+
     <multiplay>
       <chat_display>1</chat_display>
       <generic>
@@ -39,17 +39,65 @@
 
     <help>
       <title>Northrop XB 35</title>
+      <text>
+             Start: start your engines with the brakes on by setting magnetos to both (press "}" 3 times) prime the engines with "s"
+
+             Takeoff: increase engines to full throttle, and lower flaps to one third (press "]" once). once the airplane reaches approximately 100 MPH,
+             gentry pull back on the stick.
+
+             Climb: climb on a gentle slope, maintaining full throttle, and one third flap. level out at around 15000 feet.
+
+             Landing: landing in this aircraft is quite simple. abbot then miles from the runway, you should be at around 4000-5000 feet. decrease throttle to idle, lower flaps. use your rudder to help align you with the runway, and compensate with the rudder to prevent excessive yawing. lower you gear, and touch down at just under 100 MPH. roll for a few feet, and then apply emergency brake ("B").
+
+             Dittching: ditching in the ocean is possible in this airplane. slow to just under 100MPH. raise your landing gear if it is down, and VERY gently, touch down in the water until rooster tails appear behind you. then throttle down all the way, use rudder to keep your plane stable, and make sure you keep your wings out of the water.
+      </text>
     </help>
 
     <menubar include="Dialogs/xb35-menu.xml"/>
 
+    <gear>
+      <brake-parking type="double">1.0</brake-parking>
+      <gear-down>1</gear-down>
+    </gear>
+
     <systems>
+      <path>Aircraft/Northrop-xb35/Nasal/generic-systems.xml</path>
+      <autopilot>
+        <path>Aircraft/Northrop-xb35/Nasal/autopilot.xml</path>
+      </autopilot>
       <electrical>
-        <path></path>
+        <path>Aircraft/Northrop-xb35/Nasal/electrical.nas</path>
       </electrical>
     </systems>
 
   </sim>
+
+  <systems>
+    <electrical>
+      <outputs>
+        <instrument-lights type="int">1</instrument-lights>
+      </outputs>
+    </electrical>
+  </systems>
+
+  <gear>
+    <gear n="0">
+      <tyre-smoke type="int">0</tyre-smoke>
+      <sprayspeed-ms type="double">0</sprayspeed-ms>
+      <spray-density type="double">0</spray-density>
+      <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+    </gear>
+    <gear n="1">
+      <tyre-smoke type="int">0</tyre-smoke>
+      <sprayspeed-ms type="double">0</sprayspeed-ms>
+      <spray-density type="double">0</spray-density>
+    </gear>
+    <gear n="2">
+      <tyre-smoke type="int">0</tyre-smoke>
+      <sprayspeed-ms type="double">0</sprayspeed-ms>
+      <spray-density type="double">0</spray-density>
+    </gear>
+  </gear>
 
   <controls>
     <engines>
@@ -84,32 +132,43 @@
       </tank>
     </fuel>
   </consumables>
- 
+
   <engines>
     <engine n="0">
-      <rpm>150</rpm>
+      <rpm>0</rpm>
     </engine>
     <engine n="1">
-      <rpm>150</rpm>
+      <rpm>0</rpm>
     </engine>
     <engine n="2">
-      <rpm>150</rpm>
+      <rpm>0</rpm>
     </engine>
     <engine n="3">
-      <rpm>150</rpm>
+      <rpm>0</rpm>
     </engine>
   </engines>
 
   <input>
     <keyboard include="Nasal/xb35-keyboard.xml"/>
   </input>
- 
+
   <nasal>
     <xb35>
       <file>Aircraft/Northrop-xb35/Nasal/liveries.nas</file>
       <file>Aircraft/Northrop-xb35/Nasal/doors.nas</file>
       <file>Aircraft/Northrop-xb35/Nasal/light.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/autopilot.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/engine-fire.nas</file>
     </xb35>
+    <tyresmoke>
+      <file>Aircraft/Northrop-xb35/Nasal/tyresmoke.nas</file>
+    </tyresmoke>
+    <limits>
+      <file>Aircraft/Northrop-xb35/Nasal/limits.nas</file>
+    </limits>
+    <king>
+      <file>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/kfc150/kfc150.nas</file>
+    </king>
   </nasal>
-  
+
 </PropertyList>

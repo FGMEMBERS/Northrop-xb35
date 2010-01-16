@@ -47,6 +47,19 @@
     </offsets>
   </model>
 
+  <!-- FE -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/fe.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.260 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Pilote -->
   <model>
     <path>Aircraft/Northrop-xb35/Models/Pilot/pilot.xml</path>
@@ -65,7 +78,7 @@
     <path>Aircraft/Northrop-xb35/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -5.699 </x-m>
-      <y-m>  1.039 </y-m>
+      <y-m>  0.639 </y-m>
       <z-m> -0.274 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
@@ -73,16 +86,111 @@
     </offsets>
   </model>
 
-  <!-- Mitrailleur -->
   <model>
-    <path>Aircraft/Northrop-xb35/Models/Pilot/pilot.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/throttle/throttle.xml</path>
     <offsets>
-      <x-m>  2.586 </x-m>
-      <y-m> -0.030 </y-m>
-      <z-m>  0.481 </z-m>
-      <roll-deg>      0 </roll-deg>
-      <pitch-deg>     0 </pitch-deg>
-      <heading-deg> 180 </heading-deg>
+      <x-m> -6.00 </x-m>
+      <y-m>  0.10 </y-m>
+      <z-m>  0.38 </z-m>
+      <roll-deg>    180 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Pilot yoke -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/yokes/yokes.xml</path>
+    <offsets>
+      <x-m> -6.00 </x-m>
+      <y-m>  0.07 </y-m>
+      <z-m> -0.63 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Co pilot yoke -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/yokes/yokescp.xml</path>
+    <offsets>
+      <x-m> -6.00 </x-m>
+      <y-m>  0.15 </y-m>
+      <z-m> -0.30 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Pilot seat -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/seat/seat.xml</path>
+    <offsets>
+      <x-m> -5.622 </x-m>
+      <y-m> -0.418 </y-m>
+      <z-m>  0.211 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Co pilote seat -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/seat/seat.xml</path>
+    <offsets>
+      <x-m> -5.699 </x-m>
+      <y-m>  0.639 </y-m>
+      <z-m> -0.274 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Pilot pedals -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -6.300 </x-m>
+      <y-m> -0.418 </y-m>
+      <z-m> -0.230 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Co pilot pedals -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -6.333 </x-m>
+      <y-m>  0.639 </y-m>
+      <z-m> -0.640 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/quadrant/quadrant1.xml</path>
+    <offsets>
+      <x-m> -4.94 </x-m>
+      <y-m> -0.08 </y-m>
+      <z-m> -0.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/quadrant/quadrant.xml</path>
+    <offsets>
+      <x-m> -4.94 </x-m>
+      <y-m> -0.31 </y-m>
+      <z-m> -0.00 </z-m>
     </offsets>
   </model>
 

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>fe.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!--AIRFLOW --> 
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/oat/oat.xml</path>
+    <offsets>
+      <x-m> 0.015 </x-m>
+      <y-m> 0.2 </y-m>
+      <z-m> 0.17 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FLAPS -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/flap/flaps.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> 0.086 </y-m>
+      <z-m>  -0.03 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FUEL -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fuelgauge/1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> 0.17 </z-m>
+    </offsets>
+  </model>
+
+ <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fuelgauge/2.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> 0.07 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fuelgauge/3.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.03 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fuelgauge/4.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.13 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fuelgauge/5.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.314 </y-m>
+      <z-m> -0.23 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm2/LHrpm.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.2 </y-m>
+      <z-m> 0.07 </z-m>
+    </offsets>
+  </model>
+
+ <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm2/RHrpm.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.2 </y-m>
+      <z-m> -0.03 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OIL PSI -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/oilpsi/oilpsi1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.2 </y-m>
+      <z-m> -0.13 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/oilpsi/oilpsi2.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.2 </y-m>
+      <z-m> -0.23 </z-m>
+    </offsets>
+  </model>
+
+  <!-- OIL PSI -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/oiltemp/oiltemp1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.086 </y-m>
+      <z-m> 0.17 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/oiltemp/oiltemp2.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.086 </y-m>
+      <z-m> 0.07 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/switches/magnetos.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  -0.1 </y-m>
+      <z-m> 0.0.5 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fp/fuelpsi1.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.086 </y-m>
+      <z-m> -0.13 </z-m>
+    </offsets>
+  </model>
+
+ <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/fp/fuelpsi2.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  0.086 </y-m>
+      <z-m> -0.23 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/vac/vac.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m>  - 0.5 </y-m>
+      <z-m> 0.17 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/ammeter/ammeter.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> - 0.5 </y-m>
+      <z-m>  0.07 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/accel/accel.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> - 0.5 </y-m>
+      <z-m>  -0.03 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.3 </y-m>
+      <z-m>  -0.03 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.4 </y-m>
+      <z-m>  -0.03 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.3 </y-m>
+      <z-m>  0.1 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/compass1/compass.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.4 </y-m>
+      <z-m>  0.1 </z-m>
+    </offsets>
+  </model>
+
+ 
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/kx165/kx165.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.39 </y-m>
+      <z-m>  0.2 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/switches/starter.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.06 </y-m>
+      <z-m>  0.05 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/switches/master.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.1 </y-m>
+      <z-m>  0.1 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/switches/lights.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.13 </y-m>
+      <z-m>  0.1 </z-m>
+    </offsets>
+  </model>
+ 
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/switches/pump.xml</path>
+    <offsets>
+      <x-m>  0.015 </x-m>
+      <y-m> -0.22 </y-m>
+      <z-m>  0.1 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
+
