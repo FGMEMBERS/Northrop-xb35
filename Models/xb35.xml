@@ -89,64 +89,6 @@
   </animation>
 
   <animation>
-    <type>noshadow</type>
-    <object-name>verriere</object-name>
-    <object-name>bulle</object-name>
-    <object-name>bulleA</object-name>
-    <object-name>vitres</object-name>
-    <object-name>propdiscGE1</object-name>
-    <object-name>propdiscGI1</object-name>
-    <object-name>propdiscDI1</object-name>
-    <object-name>propblurDE1</object-name>
-    <object-name>propblurGE1</object-name>
-    <object-name>propblurGI1</object-name>
-    <object-name>propblurDI1</object-name>
-    <object-name>propdiscDE1</object-name>
-    <object-name>propdiscGE2</object-name>
-    <object-name>propdiscGI2</object-name>
-    <object-name>propdiscDI2</object-name>
-    <object-name>propblurDE2</object-name>
-    <object-name>propblurGE2</object-name>
-    <object-name>propblurGI2</object-name>
-    <object-name>propblurDI2</object-name>
-    <object-name>propdiscDE2</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>glass_shader.png</texture>
-    <object-name>verriere</object-name>
-    <object-name>bulle</object-name>
-    <object-name>bulleA</object-name>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>verriere</object-name>
-    <object-name>bulle</object-name>
-    <object-name>bulleA</object-name>
-    <object-name>vitres</object-name>
-    <object-name>propdiscGE1</object-name>
-    <object-name>propdiscGI1</object-name>
-    <object-name>propdiscDI1</object-name>
-    <object-name>propblurDE1</object-name>
-    <object-name>propblurGE1</object-name>
-    <object-name>propblurGI1</object-name>
-    <object-name>propblurDI1</object-name>
-    <object-name>propdiscDE1</object-name>
-    <object-name>propdiscGE2</object-name>
-    <object-name>propdiscGI2</object-name>
-    <object-name>propdiscDI2</object-name>
-    <object-name>propblurDE2</object-name>
-    <object-name>propblurGE2</object-name>
-    <object-name>propblurGI2</object-name>
-    <object-name>propblurDI2</object-name>
-    <object-name>propdiscDE2</object-name>
-  </animation>
-
-  <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
@@ -188,7 +130,6 @@
     <object-name>tourelles</object-name>
     <object-name>echappe</object-name>
     <object-name>trous</object-name>
-    <object-name>caches</object-name>
     <object-name>heliceGE1</object-name>
     <object-name>heliceGI1</object-name>
     <object-name>heliceDI1</object-name>
@@ -230,6 +171,76 @@
       <shininess-prop>shininess</shininess-prop>
     </shininess>
 -->
+  </animation>
+
+  <effect>
+    <inherits-from>Aircraft/Northrop-xb35/Models/Effects/Xb35reflect</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>caches</object-name>
+    <object-name>moteur1</object-name>
+    <object-name>moteur2</object-name>
+    <object-name>moteur3</object-name>
+    <object-name>moteur4</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>rudderGH</object-name>
+    <object-name>rudderGB</object-name>
+    <object-name>rudderDH</object-name>
+    <object-name>rudderDB</object-name>
+    <object-name>porteA1</object-name>
+    <object-name>porteA2</object-name>
+    <object-name>porteA3</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteG3</object-name>
+    <object-name>porteG4</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+    <object-name>porteD3</object-name>
+    <object-name>porteD4</object-name>
+    <object-name>antenne</object-name>
+    <object-name>antenne2</object-name>
+    <object-name>pito</object-name>
+    <object-name>prises</object-name>
+    <object-name>tourvitre</object-name>
+    <object-name>tourelles</object-name>
+  </effect>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>verriere</object-name>
+    <object-name>bulle</object-name>
+    <object-name>bulleA</object-name>
+    <object-name>vitres</object-name>
+    <object-name>propdiscGE1</object-name>
+    <object-name>propdiscGI1</object-name>
+    <object-name>propdiscDI1</object-name>
+    <object-name>propblurDE1</object-name>
+    <object-name>propblurGE1</object-name>
+    <object-name>propblurGI1</object-name>
+    <object-name>propblurDI1</object-name>
+    <object-name>propdiscDE1</object-name>
+    <object-name>propdiscGE2</object-name>
+    <object-name>propdiscGI2</object-name>
+    <object-name>propdiscDI2</object-name>
+    <object-name>propblurDE2</object-name>
+    <object-name>propblurGE2</object-name>
+    <object-name>propblurGI2</object-name>
+    <object-name>propblurDI2</object-name>
+    <object-name>propdiscDE2</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>verriere</object-name>
+    <object-name>bulle</object-name>
+    <object-name>bulleA</object-name>
+    <object-name>vitres</object-name>
   </animation>
 
   <!-- Traine Centrale -->
