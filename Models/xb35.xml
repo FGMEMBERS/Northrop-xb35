@@ -174,7 +174,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/Northrop-xb35/Models/Effects/Xb35reflect</inherits-from>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>caches</object-name>
