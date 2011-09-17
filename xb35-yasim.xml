@@ -127,20 +127,20 @@
   </vstab>
 
   <!-- Moteurs 4 Pratt & Whitney R-4360 Wasp Major de 3000 Ch -->
-  <!-- Moteur exterieur gauche. Helice 2 xp x = -6.098 --> 
   <!-- multilication du moment par 2 et contra a 1 pour simuler les deux helices contra rotative par moteur ???? -->
+  <!-- Moteur exterieur gauche. Helice 2 xp x = -6.098 --> 
   <propeller x="-4.921" y="9.224" z="0.821"
              mass="2700" 
-	     moment="3" 
-	     radius="2.25" 
-	     cruise-speed="297"
-	     cruise-rpm="945"
-	     cruise-power="2200"
-	     cruise-alt="5000"
-	     min-rpm="0" 
-	     max-rpm="945"
-	     gear-ratio="0.35"
-	     contra="1"> 
+             moment="3" 
+             radius="2.25" 
+             cruise-speed="297"
+             cruise-rpm="945"
+             cruise-power="2200"
+             cruise-alt="5000"
+             min-rpm="0" 
+             max-rpm="945"
+             gear-ratio="0.35"
+             contra="1"> 
              <actionpt x="-6.462" y="9.224" z="1.121"/>
              <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
              <piston-engine eng-power="3000" 

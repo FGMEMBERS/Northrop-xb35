@@ -22,18 +22,28 @@
     </model>
 
     <startup>
-     <splash-texture>Aircraft/Northrop-xb35/xb35-splash.png</splash-texture>
+      <splash-texture>Aircraft/Northrop-xb35/xb35-splash.png</splash-texture>
     </startup>
 
     <multiplay>
       <chat_display>1</chat_display>
-      <generic>
-        <int type="int" n="0">0</int>
-        <int type="int" n="1">0</int>
-        <int type="int" n="2">0</int>
-        <int type="int" n="3">0</int>
-        <int type="int" n="4">0</int>
-        <int type="int" n="5">0</int>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                            <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                            <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                            <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                            <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                            <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                            <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                            <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                            <!-- 7 color -->
+        <int type="bool" n="8" alias="/controls/lighting/nav-lights">  0 </int>     <!-- 8 nav-lights -->
+        <int type="double" n="9" alias="/sim/model/lights/beacon/state"> 0 </int>   <!-- 9 beacon-lights -->
+        <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>  <!--10 strobe-lights -->
+        <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int> <!--11 landing-lights -->
+        <int n="12" alias="/controls/electric/key-pos">  0 </int>                   <!--12 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                      <!--2 altitude for MP shadow -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -153,9 +163,11 @@
   </input>
 
   <nasal>
+    <doors>
+      <file>Aircraft/Northrop-xb35/Nasal/doors.nas</file>
+    </doors>
     <xb35>
       <file>Aircraft/Northrop-xb35/Nasal/liveries.nas</file>
-      <file>Aircraft/Northrop-xb35/Nasal/doors.nas</file>
       <file>Aircraft/Northrop-xb35/Nasal/light.nas</file>
       <file>Aircraft/Northrop-xb35/Nasal/autopilot.nas</file>
       <file>Aircraft/Northrop-xb35/Nasal/engine-fire.nas</file>
@@ -172,3 +184,4 @@
   </nasal>
 
 </PropertyList>
+
