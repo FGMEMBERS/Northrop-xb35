@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList> 
 
@@ -19,9 +19,18 @@
   <animation>
     <type>shader</type>
     <shader>chrome</shader>
-    <texture>glass.png</texture>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
     <object-name>vitre</object-name>
   </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>vitre</object-name>
+  </effect>
 
   <animation>
     <type>material</type>
@@ -38,11 +47,6 @@
     <type>rotate</type>
     <object-name>ball</object-name>
     <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
     <axis>
       <x> 0 </x>
       <y> 0 </y>
@@ -54,11 +58,6 @@
     <type>rotate</type>
     <object-name>ball</object-name>
     <property>instrumentation/attitude-indicator/internal-pitch-deg</property>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
     <axis>
      <x> 0 </x>
      <y> 0 </y>
@@ -70,11 +69,6 @@
     <type>rotate</type>
     <object-name>ball</object-name>
     <property>instrumentation/attitude-indicator/internal-roll-deg</property>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
     <axis>
       <x> 0 </x>
       <y> 1 </y>

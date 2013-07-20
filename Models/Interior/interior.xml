@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -34,6 +34,18 @@
     <object-name>intvitres</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>intverriere</object-name>
+    <object-name>intbulle</object-name>
+    <object-name>intbulleA</object-name>
+    <object-name>intvitres</object-name>
+  </effect>
+
   <!-- Tableau de bord -->
   <model>
     <path>Aircraft/Northrop-xb35/Models/Interior/Panel/panel.xml</path>
@@ -41,9 +53,6 @@
       <x-m> -6.520 </x-m>
       <y-m> -0.395 </y-m>
       <z-m>  0.260 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -54,9 +63,6 @@
       <x-m> -5.000 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.260 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -67,9 +73,6 @@
       <x-m> -5.622 </x-m>
       <y-m> -0.418 </y-m>
       <z-m>  0.211 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -80,9 +83,6 @@
       <x-m> -5.699 </x-m>
       <y-m>  0.639 </y-m>
       <z-m> -0.274 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -93,8 +93,6 @@
       <y-m>  0.10 </y-m>
       <z-m>  0.38 </z-m>
       <roll-deg>    180 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -105,9 +103,6 @@
       <x-m> -6.00 </x-m>
       <y-m>  0.07 </y-m>
       <z-m> -0.63 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -118,9 +113,6 @@
       <x-m> -6.00 </x-m>
       <y-m>  0.15 </y-m>
       <z-m> -0.30 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -131,9 +123,6 @@
       <x-m> -5.622 </x-m>
       <y-m> -0.418 </y-m>
       <z-m>  0.211 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -144,9 +133,6 @@
       <x-m> -5.699 </x-m>
       <y-m>  0.639 </y-m>
       <z-m> -0.274 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -157,9 +143,6 @@
       <x-m> -6.300 </x-m>
       <y-m> -0.418 </y-m>
       <z-m> -0.230 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -170,9 +153,6 @@
       <x-m> -6.333 </x-m>
       <y-m>  0.639 </y-m>
       <z-m> -0.640 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -195,4 +175,3 @@
   </model>
 
 </PropertyList>
-

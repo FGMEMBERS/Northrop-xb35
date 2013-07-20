@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -15,7 +15,7 @@
           <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
           <value>10</value>
         </greater-than>
-        <property>/gear/gear[3]/wow</property>
+        <property>/gear/gear[5]/wow</property>
       </and>
     </condition>
 
@@ -49,25 +49,17 @@
     <counter>
       <particles-per-sec>
         <value>5</value>
-        <spread>10</spread>
+        <spread>5</spread>
       </particles-per-sec>
     </counter>
         
     <particle>
       <start>
         <color>
-          <red>
-            <value>1.0</value>
-          </red>
-          <green>
-            <value>1.0</value>
-          </green>
-          <blue>
-            <value>1.0</value>
-          </blue>
-          <alpha>
-            <value>0.5</value>
-          </alpha>
+          <red><value>   1.0 </value></red>
+          <green><value> 1.0 </value></green>
+          <blue><value>  1.0 </value></blue>
+          <alpha><value> 0.5 </value></alpha>
         </color>
         <size>
           <value>0.4</value>
@@ -76,17 +68,10 @@
 
       <end>
         <color>
-          <red>
-            <value>1.0</value>
-          </red>
-          <green>
-            <value>1.0</value>
-          </green>
-          <blue>
-            <value>1.0</value>
-          </blue>
-          <alpha>
-            <value>1.0</value>
+          <red><value>   1 </value></red>
+          <green><value> 1 </value></green>
+          <blue><value>  1 </value></blue>
+          <alpha><value> 1 </value>
           </alpha>
         </color>
         <size>
@@ -111,4 +96,3 @@
   </particlesystem>
 
 </PropertyList>
-

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,9 +7,7 @@
   <animation>
     <type>material</type>
     <object-name>Switch</object-name>
-    <object-name>Circle</object-name>
     <object-name>SwitchNut</object-name>
-    <object-name>SwitchRot</object-name>
     <emission>
       <red>   1.0 </red>
       <green> 0.2 </green>
@@ -30,33 +28,33 @@
         <property>controls/lighting/nav-lights</property>
       </binding>
       <binding>
-	<command>property-toggle</command>
-	<property>controls/lighting/panel-norm</property>
+        <command>property-toggle</command>
+        <property>controls/lighting/panel-norm</property>
       </binding>
       <binding>
-	      <command>property-toggle</command>
-	      <property>controls/lighting/instruments-norm</property>
+        <command>property-toggle</command>
+        <property>controls/lighting/instruments-norm</property>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>controls/lighting/beacon</property>
         <property>controls/lighting/nav-lights</property>
-	<property>controls/lighting/instruments-norm</property>
-	<property>controls/lighting/panel-norm</property>
+        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/panel-norm</property>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>controls/lighting/strobe</property>
         <property>controls/lighting/nav-lights</property>
-	<property>controls/lighting/instruments-norm</property>
-	<property>controls/lighting/panel-norm</property>
+        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/panel-norm</property>
       </binding>
       <binding>
         <command>property-assign</command>
         <property>controls/lighting/instrument-lights</property>
         <property>controls/lighting/nav-lights</property>
-	<property>controls/lighting/instruments-norm</property>
-	<property>controls/lighting/panel-norm</property>
+        <property>controls/lighting/instruments-norm</property>
+        <property>controls/lighting/panel-norm</property>
       </binding>
       <binding>
         <command>property-toggle</command>
@@ -70,18 +68,13 @@
     <object-name>Switch</object-name>
     <property>controls/lighting/nav-lights</property>
     <property>controls/lighting/instruments-norm</property>
-	<property>controls/lighting/panel-norm</property>
+    <property>controls/lighting/panel-norm</property>
     <factor>22.5</factor>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
   </animation>
 
 </PropertyList>

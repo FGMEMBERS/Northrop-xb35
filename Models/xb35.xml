@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -12,10 +12,10 @@
 
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
-      
+
       var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
       var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -64,10 +64,13 @@
 
     <object-name>trous</object-name>
     <object-name>axeA</object-name>
+    <object-name>axeAG</object-name>
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
     <object-name>echappe</object-name>
 
@@ -115,49 +118,75 @@
 
     <object-name>trous</object-name>
     <object-name>axeA</object-name>
+    <object-name>axeAG</object-name>
     <object-name>roueA</object-name>
     <object-name>axeG</object-name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
     <object-name>axeD</object-name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
     <object-name>echappe</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <object-name>fuselage</object-name>
+    <object-name>aile</object-name>
+    <object-name>caches</object-name>
+    <object-name>moteur1</object-name>
+    <object-name>moteur2</object-name>
+    <object-name>moteur3</object-name>
+    <object-name>moteur4</object-name>
+    <object-name>aileronG</object-name>
+    <object-name>aileronD</object-name>
+    <object-name>voletG</object-name>
+    <object-name>voletD</object-name>
+    <object-name>rudderGH</object-name>
+    <object-name>rudderGB</object-name>
+    <object-name>rudderDH</object-name>
+    <object-name>rudderDB</object-name>
+    <object-name>porteA1</object-name>
+    <object-name>porteA2</object-name>
+    <object-name>porteA3</object-name>
+    <object-name>porteG1</object-name>
+    <object-name>porteG2</object-name>
+    <object-name>porteG3</object-name>
+    <object-name>porteG4</object-name>
+    <object-name>porteD1</object-name>
+    <object-name>porteD2</object-name>
+    <object-name>porteD3</object-name>
+    <object-name>porteD4</object-name>
+    <object-name>antenne</object-name>
+    <object-name>antenne2</object-name>
+    <object-name>pito</object-name>
+    <object-name>prises</object-name>
+    <object-name>tourvitre</object-name>
+    <object-name>tourelles</object-name>
+  </effect>
+
+  <effect>
+    <inherits-from>Effects/model-combined-deferred</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>caches</object-name>
@@ -210,42 +239,70 @@
     <object-name>vitres</object-name>
   </animation>
 
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>verriere</object-name>
+    <object-name>bulle</object-name>
+    <object-name>bulleA</object-name>
+    <object-name>vitres</object-name>
+  </effect>
+
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -2.18 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <name>Interieur</name>
+    <path>Aircraft/Northrop-xb35/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- For Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>Interieur</object-name>
+  </animation>
+
   <!-- Traine Centrale -->
   <model>
-    <path>Aircraft/Northrop-xb35/Models/Effects/wake.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Effects/Wakes/wake.xml</path>
     <offsets>
       <x-m>  2.875 </x-m>
       <y-m>  0.000 </y-m>
       <z-m>  0.000 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
   <!-- Traine flotteur gauche -->
   <model>
-    <path>Aircraft/Northrop-xb35/Models/Effects/wakeG.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Effects/Wakes/wakeG.xml</path>
     <offsets>
       <x-m> -0.195 </x-m>
       <y-m> -3.790 </y-m>
       <z-m>  0.000 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
   <!-- Traine flotteur droite -->
   <model>
-    <path>Aircraft/Northrop-xb35/Models/Effects/wakeD.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Effects/Wakes/wakeD.xml</path>
     <offsets>
       <x-m> -0.195 </x-m>
       <y-m>  3.790 </y-m>
       <z-m>  0.000 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -255,9 +312,6 @@
       <x-m>   9.0 </x-m>
       <y-m> -26.1 </y-m>
       <z-m>   1.0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -267,9 +321,6 @@
       <x-m>  9.0 </x-m>
       <y-m> 26.1 </y-m>
       <z-m>  1.0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -302,12 +353,6 @@
       <y-m>  6.204 </y-m>
       <z-m> -3.300 </z-m>
     </offsets>
-  </model>
-
-  <!-- Une ombre pour OSG -->
-  <model>
-    <name>shadowOSG</name>
-    <path>Aircraft/Northrop-xb35/Models/shadow.xml</path>
   </model>
 
   <!-- Les hélices -->
@@ -393,17 +438,12 @@
     </offsets>
   </model>
 
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/Northrop-xb35/Models/Interior/interior.xml</path>
-  </model>
-
   <!-- Gouverne de profondeur -->
   <animation>
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor>15</factor>
+    <factor> 15 </factor>
     <axis>
       <x1-m>   5.968 </x1-m>
       <y1-m> -20.655 </y1-m>
@@ -418,7 +458,7 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor>15</factor>
+    <factor> 15 </factor>
     <axis>
       <x1-m>   3.788 </x1-m>
       <y1-m>   9.816 </y1-m>
@@ -434,14 +474,14 @@
     <type>rotate</type>
     <object-name>aileronG</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>15.0</factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m>   5.968 </x1-m>
-      <y1-m> -20.655 </y1-m>
-      <z1-m>   0.380 </z1-m>
-      <x2-m>   3.788 </x2-m>
-      <y2-m>  -9.816 </y2-m>
-      <z2-m>  -0.050 </z2-m>
+      <x1-m>   5.98860 </x1-m>
+      <y1-m> -20.65107 </y1-m>
+      <z1-m>   0.39417 </z1-m>
+      <x2-m>   3.81826 </x2-m>
+      <y2-m>  -9.81181 </y2-m>
+      <z2-m>  -0.03295 </z2-m>
     </axis>
   </animation>
 
@@ -449,14 +489,14 @@
     <type>rotate</type>
     <object-name>aileronD</object-name>
     <property>surface-positions/right-aileron-pos-norm</property>
-    <factor>15.0</factor>
+    <factor> 15 </factor>
     <axis>
-      <x1-m>   3.788 </x1-m>
-      <y1-m>   9.816 </y1-m>
-      <z1-m>  -0.050 </z1-m>
-      <x2-m>   5.968 </x2-m>
-      <y2-m>  20.655 </y2-m>
-      <z2-m>   0.380 </z2-m>
+      <x1-m>  3.81826 </x1-m>
+      <y1-m>  9.81181 </y1-m>
+      <z1-m> -0.03295 </z1-m>
+      <x2-m>  5.98860 </x2-m>
+      <y2-m> 20.65107 </y2-m>
+      <z2-m>  0.39417 </z2-m>
     </axis>
   </animation>
 
@@ -465,7 +505,7 @@
     <type>rotate</type>
     <object-name>voletG</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-50</factor>
+    <factor> -50 </factor>
     <axis>
       <x1-m>  3.780 </x1-m>
       <y1-m> -9.808 </y1-m>
@@ -480,7 +520,7 @@
     <type>rotate</type>
     <object-name>voletD</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor>-50</factor>
+    <factor> -50 </factor>
     <axis>
       <x1-m>  2.211 </x1-m>
       <y1-m>  1.074 </y1-m>
@@ -569,11 +609,17 @@
   </animation>
 
   <!-- Compression -->
+  <animation>  
+    <name>AxeAvant</name>
+    <object-name>axeAB</object-name>
+    <object-name>roueA</object-name>
+  </animation>  
+      
   <animation>
     <type>translate</type>
-    <object-name>roueA</object-name>
+    <object-name>AxeAvant</object-name>
     <property>gear/gear[0]/compression-norm</property>
-    <factor>0.3</factor>
+    <factor> 0.3 </factor>
     <axis>
       <x> 0.094 </x>
       <y> 0.000 </y>
@@ -581,24 +627,36 @@
     </axis>
   </animation>
 
- <animation>
-   <type>translate</type>
-   <object-name>roueG</object-name>
-   <property>gear/gear[1]/compression-norm</property>
-   <interpolation>
-     <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
-     <entry><ind> 1 </ind><dep> 0.300 </dep></entry>
-   </interpolation>
-   <axis>
-     <x> 0 </x>
-     <y> 0 </y>
-     <z> 1 </z>
-   </axis>
- </animation>
-
+  <animation>  
+    <name>AxeGauche</name>
+    <object-name>axeGB</object-name>
+    <object-name>roueG</object-name>
+  </animation>  
+      
   <animation>
     <type>translate</type>
+    <object-name>AxeGauche</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.300 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>  
+    <name>AxeDroit</name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
+  </animation>  
+      
+  <animation>
+    <type>translate</type>
+    <object-name>AxeDroit</object-name>
     <property>gear/gear[2]/compression-norm</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.000 </dep></entry>
@@ -615,6 +673,7 @@
   <animation>
     <name>TrainAvant</name>
     <object-name>axeA</object-name>
+    <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
   </animation>
 
@@ -661,6 +720,7 @@
   <animation>
     <name>TrainGauche</name>
     <object-name>axeG</object-name>
+    <object-name>axeGB</object-name>
     <object-name>roueG</object-name>
   </animation>
 
@@ -704,6 +764,7 @@
   <animation>
     <name>TrainDroit</name>
     <object-name>axeD</object-name>
+    <object-name>axeDB</object-name>
     <object-name>roueD</object-name>
   </animation>
 
@@ -964,8 +1025,8 @@
   <animation>
     <type>rotate</type>
     <object-name>roueA</object-name>
-    <property>controls/flight/rudder</property>
-    <factor> -20.0 </factor>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 20 </factor>
     <center>
       <x-m> -7.276 </x-m>
       <y-m>  0.000 </y-m>
@@ -1050,6 +1111,15 @@
   </model>
 
   <model>
+    <path>Aircraft/Northrop-xb35/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m>   6.362 </x-m>
+      <y-m> -26.131 </y-m>
+      <z-m>   0.427 </z-m>
+    </offsets>
+  </model>
+
+  <model>
     <path>Aircraft/Northrop-xb35/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m>  6.462 </x-m>
@@ -1059,16 +1129,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Northrop-xb35/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>   6.362 </x-m>
-      <y-m> -26.131 </y-m>
-      <z-m>   0.427 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Northrop-xb35/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m>  6.362 </x-m>
       <y-m> 26.131 </y-m>
@@ -1077,4 +1138,3 @@
   </model>
 
 </PropertyList>
-

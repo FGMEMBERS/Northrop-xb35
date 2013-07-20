@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Based on picture here : http://www.ricksdecals.com/main/page_instrument_panels_instrument_panels.html -->
-
 <PropertyList>
 
   <path>panel.ac</path>
@@ -66,7 +65,7 @@
     <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm2.xml</path>
     <offsets>
       <x-m> 0.015 </x-m>
-      <y-m> 0.026 </y-m>
+      <y-m> 0.036 </y-m>
       <z-m> 0.012 </z-m>
     </offsets>
   </model>
@@ -84,7 +83,7 @@
     <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/rpm/rpm4.xml</path>
     <offsets>
       <x-m>  0.015 </x-m>
-      <y-m>  0.026 </y-m>
+      <y-m>  0.036 </y-m>
       <z-m> -0.058 </z-m>
     </offsets>
   </model>
@@ -112,7 +111,7 @@
   <model>
     <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/compass/compass.xml</path>
     <offsets>
-      <x-m>  0.015 </x-m>
+      <x-m>  0.014 </x-m>
       <y-m> -0.038 </y-m>
       <z-m>  0.082 </z-m>
     </offsets>

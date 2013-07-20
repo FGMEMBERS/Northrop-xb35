@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList include="xb35-base.xml">
 
- <sim>
+  <sim>
 
-  <description>Northrop XB 35 (YASim)</description>
-  <flight-model>yasim</flight-model>
-  <aero>xb35-yasim</aero>
+    <description>Northrop XB 35 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), NOVOTNY Adrian (Instruments/System)</author>
+    <flight-model>yasim</flight-model>
+    <aero>xb35-yasim</aero>
 
- </sim>
+  </sim>
 
 </PropertyList>

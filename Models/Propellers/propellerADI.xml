@@ -63,6 +63,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceTotale</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[2]/rpm</property>
+        <value> 30 </value>
+      </greater-than>
+    </condition>
     <property>engines/engine[2]/rpm</property>
     <factor> -0.479 </factor>
     <axis>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -16,7 +16,7 @@
     <type>translate</type>
     <object-name>CPT-L-pedal</object-name>
     <property>controls/flight/rudder</property>
-    <factor>0.07</factor>
+    <factor> 0.07 </factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
@@ -28,7 +28,7 @@
     <type>translate</type>
     <object-name>CPT-R-pedal</object-name>
     <property>controls/flight/rudder</property>
-    <factor>0.07</factor>
+    <factor> 0.07 </factor>
     <axis>
       <x> 1 </x>
       <y> 0 </y>

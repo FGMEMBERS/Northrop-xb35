@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
   <!-- Northrop xb35 : 2009 BARANGER Emmanuel
-
-       Utilisation du script de Melchior pour faire une veritable aile volante
+                       2010 Using the Melchior's script to make a real flying wing
   -->
   <airplane mass="74500">
 
@@ -11,10 +10,10 @@
     <control-setting axis="/controls/engines/engine[1]/throttle" value="0.3"/>
     <control-setting axis="/controls/engines/engine[2]/throttle" value="0.3"/>
     <control-setting axis="/controls/engines/engine[3]/throttle" value="0.3"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/mixture" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.77"/>
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.77"/>
     <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="0.77"/>
@@ -23,28 +22,28 @@
     <control-setting axis="/controls/engines/engine[1]/boost" value="1"/>
     <control-setting axis="/controls/engines/engine[2]/boost" value="1"/>
     <control-setting axis="/controls/engines/engine[3]/boost" value="1"/>
-    <control-setting axis="/controls/flight/flaps" value="1.0"/>
+    <control-setting axis="/controls/flight/flaps" value="1"/>
     <control-setting axis="/controls/gear/gear-down" value="1"/>
   </approach>
 
   <cruise speed="245" alt="5000" fuel="0.5"> 
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/throttle" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/mixture" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/mixture" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[2]/propeller-pitch" value="1"/>
+    <control-setting axis="/controls/engines/engine[3]/propeller-pitch" value="1"/>
     <control-setting axis="/controls/engines/engine[0]/boost" value="1"/>
     <control-setting axis="/controls/engines/engine[1]/boost" value="1"/>
     <control-setting axis="/controls/engines/engine[2]/boost" value="1"/>
     <control-setting axis="/controls/engines/engine[3]/boost" value="1"/>
-    <control-setting axis="/controls/flight/flaps" value="0.0"/>
+    <control-setting axis="/controls/flight/flaps" value="0"/>
     <control-setting axis="/controls/gear/gear-down" value="0"/>
   </cruise>
 
@@ -85,10 +84,10 @@
   </wing>
 
   <hstab x="2.153" y="0" z="-0.26"
-	 chord="12.218"
-	 length="27.6"
-	 taper="0.25"
-	 sweep="18.5"
+         chord="12.218"
+         length="27.6"
+         taper="0.25"
+         sweep="18.5"
          dihedral="2.5"
          camber="0.024"> 
          <stall aoa="18" width="3" peak="1.5"/>
@@ -146,9 +145,9 @@
              <piston-engine eng-power="3000" 
                             eng-rpm="2700"
     	                    displacement="3350"
-	                    compression="6.85"
-	                    turbo-mul="4.25" 
-	                    wastegate-mp="58.75"> 
+                            compression="6.85"
+                            turbo-mul="4.25" 
+                            wastegate-mp="58.75"> 
                             <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                             <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                             <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
@@ -194,7 +193,7 @@
              cruise-speed="297"
              cruise-rpm="945"
              cruise-power="2200"
-             cruise-alt="0"
+             cruise-alt="5000"
              min-rpm="0" 
              max-rpm="945"
              gear-ratio="0.35"
@@ -224,7 +223,7 @@
              cruise-speed="297"
              cruise-rpm="945"
              cruise-power="2200"
-             cruise-alt="0"
+             cruise-alt="5000"
              min-rpm="0" 
              max-rpm="945"
              gear-ratio="0.35"
@@ -283,7 +282,7 @@
   </gear>
 
   <!-- Flotteur gauche -->
-  <gear x="5.0" y="-10.790" z="-1.0"
+  <gear x="5.0" y="-10.790" z="-1"
         compression="0.5"  
         spring="10"
         damp="8"
@@ -297,7 +296,7 @@
   </gear>
 
  <!-- Flotteur gauche -->
-  <gear x="10.0" y="-0.0" z="-1.0"
+  <gear x="10.0" y="-0.0" z="-1"
         compression="0.5"  
         spring="10"
         damp="0"
@@ -311,7 +310,7 @@
   </gear>
 
   <!-- Flotteur droit -->
-  <gear x="5.0" y="10.790" z="-1.0"
+  <gear x="5.0" y="10.790" z="-1"
         compression="10"
         spring="10"
         damp="8"
@@ -339,7 +338,7 @@
 
   <!-- Ballast -->
   <ballast x="11.6" y="0" z="-2" mass="14500"/>
-  <ballast x="-6" y="0" z="0" mass="-4500"/>
-  <ballast x="15" y="0" z="0" mass="1700"/>
+  <ballast x="-6.0" y="0" z=" 0" mass="-4500"/>
+  <ballast x="15.0" y="0" z=" 0" mass=" 1700"/>
 
 </airplane>

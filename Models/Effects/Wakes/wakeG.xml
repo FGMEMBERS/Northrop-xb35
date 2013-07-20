@@ -1,28 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <particlesystem>
-    <name>smoke</name>
-    <texture>noise3.png</texture>
+    <name>wake</name>
 
+    <texture>smoke.png</texture>
     <emissive>false</emissive>
     <lighting>true</lighting>
 
     <condition>
       <and>
         <greater-than>
-          <property>/engines/engine[0]/n2</property>
-          <value>50</value>
+          <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+          <value>10</value>
         </greater-than>
-        <less-than>
-          <property>/position/altitude-ft</property>
-          <value>3000</value>
-        </less-than>
+        <property>/gear/gear[3]/wow</property>
       </and>
     </condition>
 
     <attach>world</attach>
+        
+    <align>billboard</align>
 
     <placer>
       <type>point</type>
@@ -34,8 +33,8 @@
       <phi-min-deg>-1.5</phi-min-deg>
       <phi-max-deg>1.5</phi-max-deg>
       <speed-mps>
-        <property>engines/engine/n1</property>
-        <factor>5</factor>
+        <value>15</value>
+        <spread>5</spread>
       </speed-mps>
       <rotation-speed>
         <x-min-deg-sec>0</x-min-deg-sec>
@@ -49,53 +48,50 @@
 
     <counter>
       <particles-per-sec>
-        <property>engines/engine/n1</property>
-        <factor>1</factor>
-        <spread>20</spread>
+        <value>5</value>
+        <spread>10</spread>
       </particles-per-sec>
     </counter>
-
-    <align>billboard</align>
-
+        
     <particle>
       <start>
         <color>
-          <red><value>   0.980 </value></red>
-          <green><value> 0.970 </value></green>
-          <blue><value>  0.950 </value></blue>
-          <alpha><value> 0.025 </value></alpha>
+          <red><value>   1.0 </value></red>
+          <green><value> 1.0 </value></green>
+          <blue><value>  1.0 </value></blue>
+          <alpha><value> 0.5 </value></alpha>
         </color>
         <size>
-          <value>0.75</value>
+          <value>0.4</value>
         </size>
       </start>
 
       <end>
         <color>
-          <red><value>   0.9500 </value></red>
-          <green><value> 0.9500 </value></green>
-          <blue><value>  0.9500 </value></blue>
-          <alpha><value> 0.0125 </value></alpha>
+          <red><value>   1 </value></red>
+          <green><value> 1 </value></green>
+          <blue><value>  1 </value></blue>
+          <alpha><value> 1 </value></alpha>
         </color>
         <size>
-          <value>7.5</value>
+          <value>10</value>
         </size>
       </end>
 
       <life-sec>
-        <value>5.0</value>
+        <value>1.0</value>
       </life-sec>
 
-      <mass-kg>0.05</mass-kg>
-      <radius-m>0.3</radius-m>
+      <mass-kg>1</mass-kg>
+      <radius-m>1</radius-m>
     </particle>
-
+        
     <program>
-      <fluid>   air  </fluid>
-      <gravity> true </gravity>
-      <wind>    true </wind>
+      <fluid>water</fluid>
+      <gravity>false</gravity>
+      <wind>false</wind>
     </program>
-
+        
   </particlesystem>
 
 </PropertyList>

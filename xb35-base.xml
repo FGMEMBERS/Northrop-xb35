@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <sim include="Nasal/views.xml">
 
-    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <description>Northrop XB 35 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), NOVOTNY Adrian (Instruments/System)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -41,25 +42,25 @@
         <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>  <!--10 strobe-lights -->
         <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int> <!--11 landing-lights -->
         <int n="12" alias="/controls/electric/key-pos">  0 </int>                   <!--12 key position -->
-        <float n="2" alias="/position/gear-agl-m">  0 </float>                      <!--2 altitude for MP shadow -->
         <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
         <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                      <!--2 altitude for MP shadow -->
       </generic>
     </multiplay>
 
     <help>
       <title>Northrop XB 35</title>
       <text>
-             Start: start your engines with the brakes on by setting magnetos to both (press "}" 3 times) prime the engines with "s"
+        Start: start your engines with the brakes on by setting magnetos to both (press "}" 3 times) prime the engines with "s"
 
-             Takeoff: increase engines to full throttle, and lower flaps to one third (press "]" once). once the airplane reaches approximately 100 MPH,
-             gentry pull back on the stick.
+        Takeoff: increase engines to full throttle, and lower flaps to one third (press "]" once). once the airplane reaches approximately 100 MPH,
+        gentry pull back on the stick.
 
-             Climb: climb on a gentle slope, maintaining full throttle, and one third flap. level out at around 15000 feet.
+        Climb: climb on a gentle slope, maintaining full throttle, and one third flap. level out at around 15000 feet.
 
-             Landing: landing in this aircraft is quite simple. abbot then miles from the runway, you should be at around 4000-5000 feet. decrease throttle to idle, lower flaps. use your rudder to help align you with the runway, and compensate with the rudder to prevent excessive yawing. lower you gear, and touch down at just under 100 MPH. roll for a few feet, and then apply emergency brake ("B").
+        Landing: landing in this aircraft is quite simple. abbot then miles from the runway, you should be at around 4000-5000 feet. decrease throttle to idle, lower flaps. use your rudder to help align you with the runway, and compensate with the rudder to prevent excessive yawing. lower you gear, and touch down at just under 100 MPH. roll for a few feet, and then apply emergency brake ("B").
 
-             Dittching: ditching in the ocean is possible in this airplane. slow to just under 100MPH. raise your landing gear if it is down, and VERY gently, touch down in the water until rooster tails appear behind you. then throttle down all the way, use rudder to keep your plane stable, and make sure you keep your wings out of the water.
+        Dittching: ditching in the ocean is possible in this airplane. slow to just under 100MPH. raise your landing gear if it is down, and VERY gently, touch down in the water until rooster tails appear behind you. then throttle down all the way, use rudder to keep your plane stable, and make sure you keep your wings out of the water.
       </text>
     </help>
 
@@ -76,8 +77,11 @@
         <path>Aircraft/Northrop-xb35/Nasal/autopilot.xml</path>
       </autopilot>
       <electrical>
-        <path>Aircraft/Northrop-xb35/Nasal/electrical.nas</path>
+        <path>Aircraft/Northrop-xb35/Nasal/electrical.xml</path>
       </electrical>
+      <limits>
+        <file>Aircraft/Northrop-xb35/Nasal/limits.xml</file>
+      </limits>
     </systems>
 
   </sim>
@@ -175,13 +179,9 @@
     <tyresmoke>
       <file>Aircraft/Northrop-xb35/Nasal/tyresmoke.nas</file>
     </tyresmoke>
-    <limits>
-      <file>Aircraft/Northrop-xb35/Nasal/limits.nas</file>
-    </limits>
-    <king>
-      <file>Aircraft/Northrop-xb35/Models/Interior/Panel/Instruments/kfc150/kfc150.nas</file>
-    </king>
+    <electrical>
+      <path>Aircraft/Northrop-xb35/Nasal/electrical.nas</path>
+    </electrical>
   </nasal>
 
 </PropertyList>
-
