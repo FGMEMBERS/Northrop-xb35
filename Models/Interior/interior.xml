@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>tours</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intverriere</object-name>
+    <object-name>intbulle</object-name>
+    <object-name>intbulleA</object-name>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intverriere</object-name>
+    <object-name>intbulle</object-name>
+    <object-name>intbulleA</object-name>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intverriere</object-name>
+    <object-name>intbulle</object-name>
+    <object-name>intbulleA</object-name>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>intverriere</object-name>
+    <object-name>intbulle</object-name>
+    <object-name>intbulleA</object-name>
+    <object-name>intvitres</object-name>
+  </effect>
+
+  <!-- Tableau de bord -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -6.520 </x-m>
+      <y-m> -0.395 </y-m>
+      <z-m>  0.260 </z-m>
+    </offsets>
+  </model>
+
+  <!-- FE -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/fe.xml</path>
+    <offsets>
+      <x-m> -5.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.260 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -5.622 </x-m>
+      <y-m> -0.418 </y-m>
+      <z-m>  0.211 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co pilote -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -5.699 </x-m>
+      <y-m>  0.639 </y-m>
+      <z-m> -0.274 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/throttle/throttle.xml</path>
+    <offsets>
+      <x-m> -6.00 </x-m>
+      <y-m>  0.10 </y-m>
+      <z-m>  0.38 </z-m>
+      <roll-deg>    180 </roll-deg>
+    </offsets>
+  </model>
+
+  <!-- Pilot yoke -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/yokes/yokes.xml</path>
+    <offsets>
+      <x-m> -6.00 </x-m>
+      <y-m>  0.07 </y-m>
+      <z-m> -0.63 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co pilot yoke -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/yokes/yokescp.xml</path>
+    <offsets>
+      <x-m> -6.00 </x-m>
+      <y-m>  0.15 </y-m>
+      <z-m> -0.30 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilot seat -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/seat/seat.xml</path>
+    <offsets>
+      <x-m> -5.622 </x-m>
+      <y-m> -0.418 </y-m>
+      <z-m>  0.211 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co pilote seat -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/seat/seat.xml</path>
+    <offsets>
+      <x-m> -5.699 </x-m>
+      <y-m>  0.639 </y-m>
+      <z-m> -0.274 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pilot pedals -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -6.300 </x-m>
+      <y-m> -0.418 </y-m>
+      <z-m> -0.230 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co pilot pedals -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/pedals/pedals.xml</path>
+    <offsets>
+      <x-m> -6.333 </x-m>
+      <y-m>  0.639 </y-m>
+      <z-m> -0.640 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/quadrant/quadrant1.xml</path>
+    <offsets>
+      <x-m> -4.94 </x-m>
+      <y-m> -0.08 </y-m>
+      <z-m> -0.00 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Interior/Panel/Divers/quadrant/quadrant.xml</path>
+    <offsets>
+      <x-m> -4.94 </x-m>
+      <y-m> -0.31 </y-m>
+      <z-m> -0.00 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

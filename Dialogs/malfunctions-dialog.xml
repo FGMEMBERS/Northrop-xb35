@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <name>XB35 malfunctions</name>
+  <layout>vbox</layout>
+
+  <text>
+    <label>Malfunctions</label>
+  </text>
+
+  <hrule/>
+
+  <group>
+    <layout>vbox</layout>
+    <halign>center</halign>
+
+    <text>
+      <label>Engine fire</label>
+    </text>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>#1</label>
+      <property>/controls/engines/engine[0]/on-fire</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/on-fire</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[0]/cutoff</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>#2</label>
+      <property>/controls/engines/engine[1]/on-fire</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[1]/on-fire</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[1]/cutoff</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>#3</label>
+      <property>/controls/engines/engine[2]/on-fire</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[2]/on-fire</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[2]/cutoff</property>
+      </binding>
+    </checkbox>
+
+    <checkbox>
+      <halign>left</halign>
+      <label>#4</label>
+      <property>/controls/engines/engine[3]/on-fire</property>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[3]/on-fire</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>/controls/engines/engine[3]/cutoff</property>
+      </binding>
+    </checkbox>
+
+  </group>
+
+  <hrule/>
+
+  <group>
+    <layout>hbox</layout>
+    <empty><stretch>true</stretch></empty>
+
+    <button>
+      <legend>Close</legend>
+      <default>true</default>
+      <key>Esc</key>
+      <binding>
+        <command>dialog-close</command>
+      </binding>
+    </button>
+
+    <empty><stretch>true</stretch></empty>
+  </group>
+
+</PropertyList>

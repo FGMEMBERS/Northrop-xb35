@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>quadrant.ac</path>
+
+  <animation>
+    <object-name>box</object-name>
+    <object-name>LeftThrottle</object-name>
+    <object-name>RightThrottle</object-name>
+    <object-name>LeftPropellerControl</object-name>
+    <object-name>RightPropellerControl</object-name>
+    <object-name>LeftMixture</object-name>
+    <object-name>RightMixture</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LeftThrottle</object-name>
+    <property>controls/engines/engine[2]/throttle</property>
+    <offset-deg> 60 </offset-deg>
+    <factor> -60 </factor>
+    <axis>
+      <x> -0.04 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RightThrottle</object-name>
+    <property>controls/engines/engine[3]/throttle</property>
+    <offset-deg> 60 </offset-deg>
+    <factor> -60 </factor>
+    <axis>
+      <x> -0.04 </x>
+      <y>  1.00 </y>
+      <z>  0.00 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LeftPropellerControl</object-name>
+    <property>controls/engines/engine[2]/propeller-pitch</property>
+    <offset-deg> 60 </offset-deg>
+    <factor> -60 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RightPropellerControl</object-name>
+    <property>controls/engines/engine[3]/propeller-pitch</property>
+    <offset-deg> 60 </offset-deg>
+    <factor> -60 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>LeftMixture</object-name>
+    <property>controls/engines/engine[2]/mixture</property>
+    <offset-deg> 60 </offset-deg>
+    <factor> -60 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>RightMixture</object-name>
+    <property>controls/engines/engine[3]/mixture</property>
+    <offset-deg> 60 </offset-deg>
+    <factor> -60 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

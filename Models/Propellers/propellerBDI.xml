@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>propellerB.ac</path>
+ 
+  <animation>
+    <object-name>helice</object-name>   
+
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </animation>   
+
+  <animation>
+    <name>HeliceTotale</name>   
+    <object-name>helice</object-name>   
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </animation>   
+
+  <!-- Mise en place des pales par défaut -->
+  <animation>
+    <type>select</type>
+    <object-name>helice</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[2]/rpm</property>
+        <value>1000</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Sélection Pales/disque en fonction de "RPM" -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[2]/rpm</property>
+        <value>1000</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[2]/rpm</property>
+        <value>400.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[2]/rpm</property>
+        <value>1000.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <!-- Rotation de l'hélice -->
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceTotale</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[2]/rpm</property>
+        <value> 30 </value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[2]/rpm</property>
+    <factor> 0.479 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

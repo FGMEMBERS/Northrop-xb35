@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <description>Northrop XB 35 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM), NOVOTNY Adrian (Instruments/System)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <sound>
+      <path>Aircraft/Northrop-xb35/Sounds/xb35-sound.xml</path>
+    </sound>
+
+    <model>
+      <path>Aircraft/Northrop-xb35/Models/xb35.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <startup>
+      <splash-texture>Aircraft/Northrop-xb35/xb35-splash.png</splash-texture>
+    </startup>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                            <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                            <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                            <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                            <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                            <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                            <!-- 5 immat -->
+        <int type="bool" n="6"> 1 </int>                                            <!-- 6 smoke/bomb/torpedo -->
+        <int type="int" n="7">  0 </int>                                            <!-- 7 color -->
+        <int type="bool" n="8" alias="/controls/lighting/nav-lights">  0 </int>     <!-- 8 nav-lights -->
+        <int type="double" n="9" alias="/sim/model/lights/beacon/state"> 0 </int>   <!-- 9 beacon-lights -->
+        <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>  <!--10 strobe-lights -->
+        <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int> <!--11 landing-lights -->
+        <int n="12" alias="/controls/electric/key-pos">  0 </int>                   <!--12 key position -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                      <!--2 altitude for MP shadow -->
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Northrop XB 35</title>
+      <text>
+        Start: start your engines with the brakes on by setting magnetos to both (press "}" 3 times) prime the engines with "s"
+
+        Takeoff: increase engines to full throttle, and lower flaps to one third (press "]" once). once the airplane reaches approximately 100 MPH,
+        gentry pull back on the stick.
+
+        Climb: climb on a gentle slope, maintaining full throttle, and one third flap. level out at around 15000 feet.
+
+        Landing: landing in this aircraft is quite simple. abbot then miles from the runway, you should be at around 4000-5000 feet. decrease throttle to idle, lower flaps. use your rudder to help align you with the runway, and compensate with the rudder to prevent excessive yawing. lower you gear, and touch down at just under 100 MPH. roll for a few feet, and then apply emergency brake ("B").
+
+        Dittching: ditching in the ocean is possible in this airplane. slow to just under 100MPH. raise your landing gear if it is down, and VERY gently, touch down in the water until rooster tails appear behind you. then throttle down all the way, use rudder to keep your plane stable, and make sure you keep your wings out of the water.
+      </text>
+    </help>
+
+    <menubar include="Dialogs/xb35-menu.xml"/>
+
+    <gear>
+      <brake-parking type="double">1.0</brake-parking>
+      <gear-down>1</gear-down>
+    </gear>
+
+    <systems>
+      <path>Aircraft/Northrop-xb35/Nasal/generic-systems.xml</path>
+      <autopilot>
+        <path>Aircraft/Northrop-xb35/Nasal/autopilot.xml</path>
+      </autopilot>
+      <electrical>
+        <path>Aircraft/Northrop-xb35/Nasal/electrical.xml</path>
+      </electrical>
+      <limits>
+        <file>Aircraft/Northrop-xb35/Nasal/limits.xml</file>
+      </limits>
+    </systems>
+
+  </sim>
+
+  <systems>
+    <electrical>
+      <outputs>
+        <instrument-lights type="int">1</instrument-lights>
+      </outputs>
+    </electrical>
+  </systems>
+
+  <gear>
+    <gear n="0">
+      <tyre-smoke type="int">0</tyre-smoke>
+      <sprayspeed-ms type="double">0</sprayspeed-ms>
+      <spray-density type="double">0</spray-density>
+      <caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+    </gear>
+    <gear n="1">
+      <tyre-smoke type="int">0</tyre-smoke>
+      <sprayspeed-ms type="double">0</sprayspeed-ms>
+      <spray-density type="double">0</spray-density>
+    </gear>
+    <gear n="2">
+      <tyre-smoke type="int">0</tyre-smoke>
+      <sprayspeed-ms type="double">0</sprayspeed-ms>
+      <spray-density type="double">0</spray-density>
+    </gear>
+  </gear>
+
+  <controls>
+    <engines>
+      <engine n="0">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="1">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="2">
+        <magnetos>0</magnetos>
+      </engine>
+      <engine n="3">
+        <magnetos>0</magnetos>
+      </engine>
+    </engines>
+  </controls>
+
+  <consumables>
+    <fuel>
+      <tank n="0">
+        <level-gal_us archive="y">20</level-gal_us>
+      </tank>
+      <tank n="1">
+        <level-gal_us archive="y">20</level-gal_us>
+      </tank>
+      <tank n="2">
+        <level-gal_us archive="y">15</level-gal_us>
+      </tank>
+      <tank n="3">
+        <level-gal_us archive="y">15</level-gal_us>
+      </tank>
+    </fuel>
+  </consumables>
+
+  <engines>
+    <engine n="0">
+      <rpm>0</rpm>
+    </engine>
+    <engine n="1">
+      <rpm>0</rpm>
+    </engine>
+    <engine n="2">
+      <rpm>0</rpm>
+    </engine>
+    <engine n="3">
+      <rpm>0</rpm>
+    </engine>
+  </engines>
+
+  <input>
+    <keyboard include="Nasal/xb35-keyboard.xml"/>
+  </input>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Northrop-xb35/Nasal/doors.nas</file>
+    </doors>
+    <xb35>
+      <file>Aircraft/Northrop-xb35/Nasal/liveries.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/light.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/autopilot.nas</file>
+      <file>Aircraft/Northrop-xb35/Nasal/engine-fire.nas</file>
+    </xb35>
+    <tyresmoke>
+      <file>Aircraft/Northrop-xb35/Nasal/tyresmoke.nas</file>
+    </tyresmoke>
+    <electrical>
+      <path>Aircraft/Northrop-xb35/Nasal/electrical.nas</path>
+    </electrical>
+  </nasal>
+
+</PropertyList>

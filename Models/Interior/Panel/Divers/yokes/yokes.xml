@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!-- Hughes H4 Hercules - 1946 -->
+<PropertyList>
+
+  <path>yokes.ac</path>
+
+  <animation>
+    <object-name>axe</object-name>     
+    <object-name>volant</object-name>    
+
+    <!-- transparent objects -->
+  </animation>
+
+  <!-- Le volant pilote -->  
+  <animation>
+    <type>rotate</type>
+    <object-name>axe</object-name>
+    <object-name>volant</object-name>    
+    <property>/controls/flight/elevator</property>
+    <factor> -13 </factor>
+    <offset-deg> -15 </offset-deg>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.825 </y-m>
+      <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>volant</object-name>
+    <property>/controls/flight/aileron</property>
+    <factor> -90 </factor>
+    <offset-deg> 0 </offset-deg>
+    <center>
+      <x-m> 0.025 </x-m>
+      <y-m> 0.573 </y-m>
+      <z-m> 0.734 </z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
