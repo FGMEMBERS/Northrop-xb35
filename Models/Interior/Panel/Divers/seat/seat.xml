@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>seat.ac</path>
+
+  <animation>
+    <object-name>siege</object-name>
+
+    <!-- transparent objects -->
+  </animation>
+
+</PropertyList>
+
+
