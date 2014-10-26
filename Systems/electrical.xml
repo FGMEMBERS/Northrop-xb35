@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <!-- Supplier list -->
+  <supplier>
+    <name>Battery 1</name>
+    <prop>/systems/electrical/suppliers/battery[0]</prop>
+    <kind>battery</kind>
+    <volts>12</volts> <!-- standard RAF -->
+    <amps>40</amps>  
+  </supplier>
+  
+  <supplier>
+    <name>Generator 1</name>
+    <prop>/systems/electrical/suppliers/alternator[0]</prop>
+    <kind>alternator</kind>
+    <rpm-source>/engines/engine[0]/rpm</rpm-source>
+    <volts>12</volts> 
+    <amps>40</amps>   
+  </supplier>
+  
+  <!-- Bus list -->
+  <bus>
+    <name>Master Bus</name>
+    <prop>/systems/electrical/outputs/bus[0]</prop>
+    <!-- Avionics outputs tied directly to bus, note that this is a -->
+    <!-- simple way to provide electrical outputs if you don't need -->
+    <!-- to put a circuit breaker or switch in front of the output. -->
+    <!-- *AND* if you don't care about back propogating the output -->
+    <!-- current. -->
+    <prop>/systems/electrical/outputs/avionics-fan</prop>
+    <prop>/systems/electrical/outputs/gps-mfd</prop>
+    <prop>/systems/electrical/outputs/gps</prop>
+    <prop>/systems/electrical/outputs/hsi</prop>
+    <prop>/systems/electrical/outputs/nav[0]</prop>
+    <prop>/systems/electrical/outputs/dme</prop>
+    <prop>/systems/electrical/outputs/audio-panel[0]</prop>
+    <prop>/systems/electrical/outputs/nav[1]</prop>
+    <prop>/systems/electrical/outputs/audio-panel[1]</prop>
+    <prop>/systems/electrical/outputs/transponder</prop>
+    <prop>/systems/electrical/outputs/autopilot</prop>
+    <prop>/systems/electrical/outputs/adf</prop>
+  </bus>
+  
+  <!-- Outputs -->
+  <output>
+    <name>Starter 1 Power</name>
+    <prop>/systems/electrical/outputs/starter[0]</prop>
+  </output>
+  
+  <output>
+    <name>Instrument Power</name>
+    <prop>/systems/electrical/outputs/instr-ignition-switch</prop>
+  </output>
+  
+  <output>
+    <name>Fuel Pump Power</name>
+    <prop>/systems/electrical/outputs/fuel-pump</prop>
+  </output>
+  
+  <output>
+    <name>Landing Light Power</name>
+    <prop>/systems/electrical/outputs/landing-light</prop>
+  </output>
+  
+  <output>
+    <name>Flaps Power</name>
+    <prop>/systems/electrical/outputs/flaps</prop>
+  </output>
+  
+  <output>
+    <name>Turn Coordinator Power</name>
+    <prop>/systems/electrical/outputs/turn-coordinator</prop>
+  </output>
+  
+  <output>
+    <name>Map Lights Power</name>
+    <prop>/systems/electrical/outputs/map-lights</prop>
+  </output>
+  
+  <output>
+    <name>Instrument Lights Power</name>
+    <prop>/systems/electrical/outputs/instrument-lights</prop>
+  </output>
+  
+  <output>
+    <name>Pitot Heat Power</name>
+    <prop>/systems/electrical/outputs/pitot-heat</prop>
+  </output>
+  
+  <output>
+    <name>Fuel Gauge Power</name>
+    <prop>/systems/electrical/outputs/fuel-gauge</prop>
+  </output>
+  
+  <output>
+    <name>Gun Sight Power</name>
+    <prop>/systems/electrical/outputs/gun-sight-main</prop>
+  </output>
+  
+  <output>
+    <name>Undercarriage Indicator Power Main</name>
+    <prop>/systems/electrical/outputs/gear-indicator-main</prop>
+  </output>
+  
+  <output>
+    <name>Undercarriage Indicator Power Alt</name>
+    <prop>/systems/electrical/outputs/gear-indicator-alt</prop>
+  </output>
+  
+  
+  
+  <!-- connect in power sources -->
+  <connector>
+    <input>Generator 1</input>
+    <output>Master Bus</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/master-alt</prop>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Battery 1</input>
+    <output>Master Bus</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/master-bat</prop>
+    </switch>
+  </connector>
+  
+  <!-- connect starter output -->
+  <connector>
+    <input>Master Bus</input>
+    <output>Starter 1 Power</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/starter</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+  
+  <!-- connect master bus outputs -->
+  <connector>
+    <input>Master Bus</input>
+    <output>Instrument Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/instr-ignition-switch</prop>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Fuel Pump Power</output>
+    <switch>
+      <prop>/controls/engines/engine[0]/fuel-pump</prop>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Landing Light Power</output>
+    <switch>
+      <prop>/controls/switches/landing-light</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Flaps Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/flaps</prop>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Turn Coordinator Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/turn-coordinator</prop>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Map Lights Power</output>
+    <switch>
+      <prop>/controls/switches/nav-lights</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Instrument Lights Power</output>
+    <switch>
+      <prop>/controls/circuit-breakers/instrument-lights</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Pitot Heat Power</output>
+    <switch>
+      <prop>/controls/switches/pitot-heat</prop>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Gun Sight Power</output>
+    <switch>
+      <prop>/controls/switches/gun-sight-main</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector> 
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Fuel Gauge Power</output>
+    <switch>
+      <prop>/controls/switches/fuel-gauge</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Undercarriage Indicator Power Main</output>
+    <switch>
+      <prop>/controls/switches/gear-indicator</prop>
+      <initial-state>on</initial-state>
+    </switch>
+    <switch>
+      <prop>/controls/switches/gear-indicator-main</prop>
+      <initial-state>on</initial-state>
+    </switch>
+  </connector>
+  
+  <connector>
+    <input>Master Bus</input>
+    <output>Undercarriage Indicator Power Alt</output>
+    <switch>
+      <prop>/controls/switches/gear-indicator</prop>
+      <initial-state>on</initial-state>
+    </switch>
+    <switch>
+      <prop>/controls/switches/gear-indicator-alt</prop>
+      <initial-state>off</initial-state>
+    </switch>
+  </connector>
+  
+</PropertyList>
