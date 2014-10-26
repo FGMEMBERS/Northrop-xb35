@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>switch.ac</path>
-
+  
   <animation>
     <type>material</type>
     <object-name>Switch</object-name>
     <object-name>SwitchNut</object-name>
     <emission>
-      <red>   1.0 </red>
-      <green> 0.2 </green>
-      <blue>  0.0 </blue>
       <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
     </emission>
   </animation>
   
@@ -28,8 +28,8 @@
         <property>controls/electric/avionics-switch</property>
       </binding>
       <binding>
-	<command>property-toggle</command>
-	<property>instrumentation/nav/power-btn</property>
+        <command>property-toggle</command>
+        <property>instrumentation/nav/power-btn</property>
       </binding>
       <binding>
         <command>property-toggle</command>
@@ -37,7 +37,7 @@
       </binding>
     </action>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>Switch</object-name>
@@ -49,5 +49,5 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>

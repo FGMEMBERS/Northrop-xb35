@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
 
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -131,11 +131,6 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-    <specular>
-      <red-prop>specular/red</red-prop>
-      <green-prop>specular/green</green-prop>
-      <blue-prop>specular/blue</blue-prop>
-    </specular>
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
@@ -145,9 +140,6 @@
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <condition>
-      <not><property>sim/rendering/rembrandt/enabled</property></not>
-    </condition>
     <object-name>fuselage</object-name>
     <object-name>aile</object-name>
     <object-name>caches</object-name>
@@ -181,76 +173,24 @@
     <object-name>tourvitre</object-name>
     <object-name>tourelles</object-name>
   </effect>
-
-  <effect>
-    <inherits-from>Effects/model-combined-deferred</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
-    <object-name>fuselage</object-name>
-    <object-name>aile</object-name>
-    <object-name>caches</object-name>
-    <object-name>moteur1</object-name>
-    <object-name>moteur2</object-name>
-    <object-name>moteur3</object-name>
-    <object-name>moteur4</object-name>
-    <object-name>aileronG</object-name>
-    <object-name>aileronD</object-name>
-    <object-name>voletG</object-name>
-    <object-name>voletD</object-name>
-    <object-name>rudderGH</object-name>
-    <object-name>rudderGB</object-name>
-    <object-name>rudderDH</object-name>
-    <object-name>rudderDB</object-name>
-    <object-name>porteA1</object-name>
-    <object-name>porteA2</object-name>
-    <object-name>porteA3</object-name>
-    <object-name>porteG1</object-name>
-    <object-name>porteG2</object-name>
-    <object-name>porteG3</object-name>
-    <object-name>porteG4</object-name>
-    <object-name>porteD1</object-name>
-    <object-name>porteD2</object-name>
-    <object-name>porteD3</object-name>
-    <object-name>porteD4</object-name>
-    <object-name>antenne</object-name>
-    <object-name>antenne2</object-name>
-    <object-name>pito</object-name>
-    <object-name>prises</object-name>
-    <object-name>tourvitre</object-name>
-    <object-name>tourelles</object-name>
-  </effect>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>verriere</object-name>
-    <object-name>bulle</object-name>
-    <object-name>bulleA</object-name>
-    <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>verriere</object-name>
-    <object-name>bulle</object-name>
-    <object-name>bulleA</object-name>
-    <object-name>vitres</object-name>
-  </animation>
 
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Northrop-xb35/Models/Effects/Glass/glass</inherits-from>
     <object-name>verriere</object-name>
     <object-name>bulle</object-name>
     <object-name>bulleA</object-name>
     <object-name>vitres</object-name>
   </effect>
-
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>verriere</object-name>
+    <object-name>bulle</object-name>
+    <object-name>bulleA</object-name>
+    <object-name>vitres</object-name>
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Northrop-xb35/Models/shadow.xml</path>
@@ -263,71 +203,113 @@
 
   <!-- Intérieur -->
   <model>
-    <name>Interieur</name>
+    <usage>interior</usage>
     <path>Aircraft/Northrop-xb35/Models/Interior/interior.xml</path>
-  </model>
-
-  <!-- For Rembrandt -->
-  <animation>
-    <type>noshadow</type>
-    <object-name>Interieur</object-name>
-  </animation>
-
-  <!-- Traine Centrale -->
-  <model>
-    <path>Aircraft/Northrop-xb35/Models/Effects/Wakes/wake.xml</path>
-    <offsets>
-      <x-m>  2.875 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.000 </z-m>
-      <pitch-deg> -45 </pitch-deg>
-    </offsets>
-  </model>
-
-  <!-- Traine flotteur gauche -->
-  <model>
-    <path>Aircraft/Northrop-xb35/Models/Effects/Wakes/wakeG.xml</path>
-    <offsets>
-      <x-m> -0.195 </x-m>
-      <y-m> -3.790 </y-m>
-      <z-m>  0.000 </z-m>
-      <pitch-deg> -45 </pitch-deg>
-    </offsets>
-  </model>
-
-  <!-- Traine flotteur droite -->
-  <model>
-    <path>Aircraft/Northrop-xb35/Models/Effects/Wakes/wakeD.xml</path>
-    <offsets>
-      <x-m> -0.195 </x-m>
-      <y-m>  3.790 </y-m>
-      <z-m>  0.000 </z-m>
-      <pitch-deg> -45 </pitch-deg>
-    </offsets>
   </model>
 
   <model>
     <path>Aircraft/Northrop-xb35/Models/Effects/Tiptrail/tiptrail.xml</path>
     <offsets>
-      <x-m>   9.0 </x-m>
-      <y-m> -26.1 </y-m>
-      <z-m>   1.0 </z-m>
+      <x-m>   8.8 </x-m>
+      <y-m> -25.6 </y-m>
+      <z-m>   0.6 </z-m>
     </offsets>
   </model>
 
    <model>
     <path>Aircraft/Northrop-xb35/Models/Effects/Tiptrail/tiptrail.xml</path>
     <offsets>
-      <x-m>  9.0 </x-m>
-      <y-m> 26.1 </y-m>
-      <z-m>  1.0 </z-m>
+      <x-m>  8.8 </x-m>
+      <y-m> 25.6 </y-m>
+      <z-m>  0.6 </z-m>
     </offsets>
   </model>
 
+  <!-- Engines effects -->
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingLE.xml</path>
+    <offsets>
+      <x-m> -2.37 </x-m>
+      <y-m> -7.72 </y-m>
+      <z-m> -0.98 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingLE.xml</path>
+    <offsets>
+      <x-m> -2.77 </x-m>
+      <y-m> -6.84 </y-m>
+      <z-m> -1.02 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingLI.xml</path>
+    <offsets>
+      <x-m> -3.23 </x-m>
+      <y-m> -6.01 </y-m>
+      <z-m> -1.05 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingLI.xml</path>
+    <offsets>
+      <x-m> -3.52 </x-m>
+      <y-m> -5.16 </y-m>
+      <z-m> -1.09 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingRI.xml</path>
+    <offsets>
+      <x-m> -3.23 </x-m>
+      <y-m>  6.01 </y-m>
+      <z-m> -1.05 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingRI.xml</path>
+    <offsets>
+      <x-m> -3.52 </x-m>
+      <y-m>  5.16 </y-m>
+      <z-m> -1.09 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingRE.xml</path>
+    <offsets>
+      <x-m> -2.37 </x-m>
+      <y-m>  7.72 </y-m>
+      <z-m> -0.98 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Northrop-xb35/Models/Effects/cranking/crankingRE.xml</path>
+    <offsets>
+      <x-m> -2.77 </x-m>
+      <y-m>  6.84 </y-m>
+      <z-m> -1.02 </z-m>
+      <pitch-deg> 45 </pitch-deg>
+    </offsets>
+  </model>
+  
   <!-- Effets sur le sol -->
   <!-- Roue avant -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground0.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Effects/ground/ground0.xml</path>
     <offsets>
       <x-m> -7.276 </x-m>
       <y-m>  0.000 </y-m>
@@ -337,7 +319,7 @@
 
   <!-- Roue gauche -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground1.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Effects/ground/ground1.xml</path>
     <offsets>
       <x-m>  0.201 </x-m>
       <y-m> -6.204 </y-m>
@@ -347,7 +329,7 @@
 
   <!-- Roue droite -->
   <model>
-    <path>Aircraft/Douglas-Dc3/Models/Effects/ground/ground2.xml</path>
+    <path>Aircraft/Northrop-xb35/Models/Effects/ground/ground2.xml</path>
     <offsets>
       <x-m>  0.201 </x-m>
       <y-m>  6.204 </y-m>
@@ -580,12 +562,12 @@
       <entry><ind>   0.50 </ind><dep>  0 </dep></entry>
     </interpolation>
     <axis>
-      <x1-m>   6.833 </x1-m>
-      <y1-m>  25.603 </y1-m>
-      <z1-m>   0.639 </z1-m>
-      <x2-m>   5.833 </x2-m>
-      <y2-m>  20.674 </y2-m>
-      <z2-m>   0.601 </z2-m>
+      <x1-m>  6.833 </x1-m>
+      <y1-m> 25.603 </y1-m>
+      <z1-m>  0.639 </z1-m>
+      <x2-m>  5.833 </x2-m>
+      <y2-m> 20.674 </y2-m>
+      <z2-m>  0.601 </z2-m>
     </axis>
   </animation>
 
@@ -599,12 +581,12 @@
       <entry><ind>  0.50 </ind><dep>   0 </dep></entry>
     </interpolation>
     <axis>
-      <x1-m>   6.833 </x1-m>
-      <y1-m>  25.603 </y1-m>
-      <z1-m>   0.353 </z1-m>
-      <x2-m>   5.833 </x2-m>
-      <y2-m>  20.674 </y2-m>
-      <z2-m>   0.144 </z2-m>
+      <x1-m>  6.833 </x1-m>
+      <y1-m> 25.603 </y1-m>
+      <z1-m>  0.353 </z1-m>
+      <x2-m>  5.833 </x2-m>
+      <y2-m> 20.674 </y2-m>
+      <z2-m>  0.144 </z2-m>
     </axis>
   </animation>
 

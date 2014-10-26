@@ -7,12 +7,7 @@
     <model>
       <livery>
         <name type="string">wheathered</name>
-        <texture>Liveries/wheathered.png</texture>
-        <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
-        </specular>
+        <texture>Liveries/1024x1024/wheathered.png</texture>
         <emission>
           <red>   0.2 </red>
           <green> 0.2 </green>

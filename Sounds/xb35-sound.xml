@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <fx>
-
+    
     <!-- Engines 1 & 2 -->
     <crank>
       <name>engstart1</name>
@@ -26,7 +26,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>crank1</name>
       <mode>looped</mode>
@@ -58,7 +58,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <crank>
       <name>cough1</name>
       <path>Sounds/coughing.wav</path>
@@ -79,7 +79,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crank>
-
+    
     <!-- internal -->
     <engine>
       <name>engine1</name>
@@ -87,25 +87,25 @@
       <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
       <condition>
         <and>
-           <or>
-             <and>
-               <property>/engines/engine[0]/running</property>
-               <greater-than-equals>
-                 <property>/engines/engine[0]/mp-osi</property>
-                 <value>6.2</value>
-               </greater-than-equals>
-               </and>
-               <and>
-               <property>/engines/engine[1]/running</property>
-               <greater-than-equals>
-                 <property>/engines/engine[1]/mp-osi</property>
-                 <value>6.2</value>
-               </greater-than-equals>
-             </and>
-           </or>
-           <property>/sim/current-view/internal</property>
-         </and>
-       </condition>
+          <or>
+            <and>
+              <property>/engines/engine[0]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[0]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+            <and>
+              <property>/engines/engine[1]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[1]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+          </or>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
       <position>
         <x>-2.0</x>
         <y> 0.0</y>
@@ -142,7 +142,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <engine>
       <name>idle1</name>
       <mode>looped</mode>
@@ -204,401 +204,401 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
-  <!-- external -->
-  <engine>
-   <name>engine1 external</name>
-   <mode>looped</mode>
-   <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
-   <condition>
-    <and>
-     <or>
-      <and>
-       <property>/engines/engine[0]/running</property>
-       <greater-than-equals>
-        <property>/engines/engine[0]/mp-osi</property>
-        <value>6.2</value>
-       </greater-than-equals>
-      </and>
-      <and>
-       <property>/engines/engine[1]/running</property>
-       <greater-than-equals>
-        <property>/engines/engine[1]/mp-osi</property>
-        <value>6.2</value>
-       </greater-than-equals>
-      </and>
-     </or>
-     <not>
-      <property>/sim/current-view/internal</property>
-     </not>
-    </and>
-   </condition>
-   <position>
-    <x>-2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <property>/engines/engine[0]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.02</min>
-    <max>0.30</max>
-    <offset>0.07</offset>
-   </volume>
-   <volume>
-    <property>/engines/engine[1]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.02</min>
-    <max>0.30</max>
-    <offset>0.07</offset>
-   </volume>
-   <pitch>
-    <property>/engines/engine[0]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-   <pitch>
-    <property>/engines/engine[1]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </engine>
-
-  <engine>
-   <name>idle1 external</name>
-   <mode>looped</mode>
-   <path>Aircraft/Northrop-xb35/Sounds/engine_idle.wav</path>
-   <condition>
-    <and>
-     <or>
-      <and>
-       <property>/engines/engine[0]/running</property>
-       <less-than>
-        <property>/engines/engine[0]/mp-osi</property>
-        <value>6.2</value>
-       </less-than>
-      </and>
-      <and>
-       <property>/engines/engine[1]/running</property>
-       <less-than>
-        <property>/engines/engine[1]/mp-osi</property>
-        <value>6.2</value>
-       </less-than>
-      </and>
-     </or>
-     <not>
-      <property>/sim/current-view/internal</property>
-     </not>
-    </and>
-   </condition>
-   <position>
-    <x>-2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <property>/engines/engine[0]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.01</min>
-    <max>0.04</max>
-    <offset>0.05</offset>
-   </volume>
-   <volume>
-    <property>/engines/engine[1]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.01</min>
-    <max>0.04</max>
-    <offset>0.05</offset>
-   </volume>
-   <pitch>
-    <property>/engines/engine[0]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-   <pitch>
-    <property>/engines/engine[1]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </engine>
-
-  <!-- Engines 3 & 4 -->
-  <crank>
-   <name>engstart2</name>
-   <path>Aircraft/Northrop-xb35/Sounds/engine_start.wav</path>
-   <condition>
-    <or>
-     <property>/engines/engine[2]/cranking</property>
-     <property>/engines/engine[3]/cranking</property>
-    </or>
-   </condition>
-   <position>
-    <x>2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <offset>0.01</offset>
-    <max>0.010</max>
-   </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </crank>
-
-  <crank>
-   <name>crank2</name>
-   <mode>looped</mode>
-   <path>Sounds/cranking.wav</path>
-   <condition>
-    <or>
-     <and>
-      <property>/engines/engine[2]/cranking</property>
-      <not>
-       <property>/engines/engine[2]/running</property>
-      </not>
-     </and>
-     <and>
-      <property>/engines/engine[3]/cranking</property>
-      <not>
-       <property>/engines/engine[3]/running</property>
-      </not>
-     </and>
-    </or>
-   </condition>
-   <position>
-    <x>2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <offset>0.5</offset>
-   </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </crank>
-
-  <crank>
-   <name>cough2</name>
-   <path>Sounds/coughing.wav</path>
-   <condition>
-    <or>
-     <property>/engines/engine[2]/running</property>
-     <property>/engines/engine[3]/running</property>
-    </or>
-   </condition>
-   <position>
-    <x>2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <offset>0.0</offset>
-   </volume>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </crank>
-
-  <engine>
-   <name>engine2</name>
-   <mode>looped</mode>
-   <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
-   <condition>
-    <and>
-     <or>
-      <and>
-       <property>/engines/engine[2]/running</property>
-       <greater-than-equals>
-        <property>/engines/engine[2]/mp-osi</property>
-        <value>6.2</value>
-       </greater-than-equals>
-      </and>
-      <and>
-       <property>/engines/engine[3]/running</property>
-       <greater-than-equals>
-        <property>/engines/engine[3]/mp-osi</property>
-        <value>6.2</value>
-       </greater-than-equals>
-      </and>
-     </or>
-     <property>/sim/current-view/internal</property>
-    </and>
-   </condition>
-   <position>
-    <x>2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <property>/engines/engine[2]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.01</min>
-    <max>0.15</max>
-    <offset>0.03</offset>
-   </volume>
-   <volume>
-    <property>/engines/engine[3]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.01</min>
-    <max>0.15</max>
-    <offset>0.03</offset>
-   </volume>
-   <pitch>
-    <property>/engines/engine[2]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-   <pitch>
-    <property>/engines/engine[3]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </engine>
-
-  <engine>
-   <name>idle2</name>
-   <mode>looped</mode>
-   <path>Aircraft/Northrop-xb35/Sounds/engine_idle.wav</path>
-   <condition>
-    <and>
-     <or>
-      <and>
-       <property>/engines/engine[2]/running</property>
-       <less-than>
-        <property>/engines/engine[2]/mp-osi</property>
-        <value>6.2</value>
-       </less-than>
-      </and>
-      <and>
-       <property>/engines/engine[3]/running</property>
-       <less-than>
-        <property>/engines/engine[3]/mp-osi</property>
-        <value>6.2</value>
-       </less-than>
-      </and>
-     </or>
-     <property>/sim/current-view/internal</property>
-    </and>
-   </condition>
-   <position>
-    <x>2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <property>/engines/engine[2]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.005</min>
-    <max>0.02</max>
-    <offset>0.02</offset>
-   </volume>
-   <volume>
-    <property>/engines/engine[3]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.005</min>
-    <max>0.02</max>
-    <offset>0.02</offset>
-   </volume>
-   <pitch>
-    <property>/engines/engine[2]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-   <pitch>
-    <property>/engines/engine[3]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-      <reference-dist>100</reference-dist>
-      <max-dist>1000</max-dist>
-  </engine>
-
+    
     <!-- external -->
-  <engine>
-   <name>engine2 external</name>
-   <mode>looped</mode>
-   <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
-   <condition>
-    <and>
-     <or>
-      <and>
-       <property>/engines/engine[2]/running</property>
-       <greater-than-equals>
-        <property>/engines/engine[2]/mp-osi</property>
-        <value>6.2</value>
-       </greater-than-equals>
-      </and>
-      <and>
-       <property>/engines/engine[3]/running</property>
-       <greater-than-equals>
-        <property>/engines/engine[3]/mp-osi</property>
-        <value>6.2</value>
-       </greater-than-equals>
-      </and>
-     </or>
-     <not>
-      <property>/sim/current-view/internal</property>
-     </not>
-    </and>
-   </condition>
-   <position>
-    <x>2.0</x>
-    <y>0.0</y>
-    <z>-2.0</z>
-   </position>
-   <volume>
-    <property>/engines/engine[2]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.02</min>
-    <max>0.30</max>
-    <offset>0.06</offset>
-   </volume>
-   <volume>
-    <property>/engines/engine[3]/mp-osi</property>
-    <factor>0.009</factor>
-    <min>0.02</min>
-    <max>0.30</max>
-    <offset>0.06</offset>
-   </volume>
-   <pitch>
-    <property>/engines/engine[2]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
-   <pitch>
-    <property>/engines/engine[3]/rpm</property>
-    <factor>0.0004</factor>
-    <min>0.1</min>
-    <max>2.0</max>
-    <offset>0.3</offset>
-   </pitch>
+    <engine>
+      <name>engine1 external</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
+      <condition>
+        <and>
+          <or>
+            <and>
+              <property>/engines/engine[0]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[0]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+            <and>
+              <property>/engines/engine[1]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[1]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+          </or>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <position>
+        <x>-2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <property>/engines/engine[0]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.02</min>
+        <max>0.30</max>
+        <offset>0.07</offset>
+      </volume>
+      <volume>
+        <property>/engines/engine[1]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.02</min>
+        <max>0.30</max>
+        <offset>0.07</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <pitch>
+        <property>/engines/engine[1]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
-  </engine>
-
+    </engine>
+    
+    <engine>
+      <name>idle1 external</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-xb35/Sounds/engine_idle.wav</path>
+      <condition>
+        <and>
+          <or>
+            <and>
+              <property>/engines/engine[0]/running</property>
+              <less-than>
+                <property>/engines/engine[0]/mp-osi</property>
+                <value>6.2</value>
+              </less-than>
+            </and>
+            <and>
+              <property>/engines/engine[1]/running</property>
+              <less-than>
+                <property>/engines/engine[1]/mp-osi</property>
+                <value>6.2</value>
+              </less-than>
+            </and>
+          </or>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <position>
+        <x>-2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <property>/engines/engine[0]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.01</min>
+        <max>0.04</max>
+        <offset>0.05</offset>
+      </volume>
+      <volume>
+        <property>/engines/engine[1]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.01</min>
+        <max>0.04</max>
+        <offset>0.05</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[0]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <pitch>
+        <property>/engines/engine[1]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
+    <!-- Engines 3 & 4 -->
+    <crank>
+      <name>engstart2</name>
+      <path>Aircraft/Northrop-xb35/Sounds/engine_start.wav</path>
+      <condition>
+        <or>
+          <property>/engines/engine[2]/cranking</property>
+          <property>/engines/engine[3]/cranking</property>
+        </or>
+      </condition>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <offset>0.01</offset>
+        <max>0.010</max>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+    
+    <crank>
+      <name>crank2</name>
+      <mode>looped</mode>
+      <path>Sounds/cranking.wav</path>
+      <condition>
+        <or>
+          <and>
+            <property>/engines/engine[2]/cranking</property>
+            <not>
+              <property>/engines/engine[2]/running</property>
+            </not>
+          </and>
+          <and>
+            <property>/engines/engine[3]/cranking</property>
+            <not>
+              <property>/engines/engine[3]/running</property>
+            </not>
+          </and>
+        </or>
+      </condition>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <offset>0.5</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+    
+    <crank>
+      <name>cough2</name>
+      <path>Sounds/coughing.wav</path>
+      <condition>
+        <or>
+          <property>/engines/engine[2]/running</property>
+          <property>/engines/engine[3]/running</property>
+        </or>
+      </condition>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <offset>0.0</offset>
+      </volume>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </crank>
+    
+    <engine>
+      <name>engine2</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
+      <condition>
+        <and>
+          <or>
+            <and>
+              <property>/engines/engine[2]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[2]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+            <and>
+              <property>/engines/engine[3]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[3]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+          </or>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <property>/engines/engine[2]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.01</min>
+        <max>0.15</max>
+        <offset>0.03</offset>
+      </volume>
+      <volume>
+        <property>/engines/engine[3]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.01</min>
+        <max>0.15</max>
+        <offset>0.03</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[2]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <pitch>
+        <property>/engines/engine[3]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
+    <engine>
+      <name>idle2</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-xb35/Sounds/engine_idle.wav</path>
+      <condition>
+        <and>
+          <or>
+            <and>
+              <property>/engines/engine[2]/running</property>
+              <less-than>
+                <property>/engines/engine[2]/mp-osi</property>
+                <value>6.2</value>
+              </less-than>
+            </and>
+            <and>
+              <property>/engines/engine[3]/running</property>
+              <less-than>
+                <property>/engines/engine[3]/mp-osi</property>
+                <value>6.2</value>
+              </less-than>
+            </and>
+          </or>
+          <property>/sim/current-view/internal</property>
+        </and>
+      </condition>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <property>/engines/engine[2]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.005</min>
+        <max>0.02</max>
+        <offset>0.02</offset>
+      </volume>
+      <volume>
+        <property>/engines/engine[3]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.005</min>
+        <max>0.02</max>
+        <offset>0.02</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[2]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <pitch>
+        <property>/engines/engine[3]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
+    <!-- external -->
+    <engine>
+      <name>engine2 external</name>
+      <mode>looped</mode>
+      <path>Aircraft/Northrop-xb35/Sounds/engine_running.wav</path>
+      <condition>
+        <and>
+          <or>
+            <and>
+              <property>/engines/engine[2]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[2]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+            <and>
+              <property>/engines/engine[3]/running</property>
+              <greater-than-equals>
+                <property>/engines/engine[3]/mp-osi</property>
+                <value>6.2</value>
+              </greater-than-equals>
+            </and>
+          </or>
+          <not>
+            <property>/sim/current-view/internal</property>
+          </not>
+        </and>
+      </condition>
+      <position>
+        <x>2.0</x>
+        <y>0.0</y>
+        <z>-2.0</z>
+      </position>
+      <volume>
+        <property>/engines/engine[2]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.02</min>
+        <max>0.30</max>
+        <offset>0.06</offset>
+      </volume>
+      <volume>
+        <property>/engines/engine[3]/mp-osi</property>
+        <factor>0.009</factor>
+        <min>0.02</min>
+        <max>0.30</max>
+        <offset>0.06</offset>
+      </volume>
+      <pitch>
+        <property>/engines/engine[2]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <pitch>
+        <property>/engines/engine[3]/rpm</property>
+        <factor>0.0004</factor>
+        <min>0.1</min>
+        <max>2.0</max>
+        <offset>0.3</offset>
+      </pitch>
+      <reference-dist>100</reference-dist>
+      <max-dist>1000</max-dist>
+    </engine>
+    
     <engine>
       <name>idle2 external</name>
       <mode>looped</mode>
@@ -662,7 +662,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </engine>
-
+    
     <!-- ********************************************* -->
     <flap>
       <name>flaps</name>
@@ -675,7 +675,7 @@
       <reference-dist>10.0</reference-dist>
       <max-dist>20.0</max-dist>
     </flap>
-
+    
     <wind>
       <name>wind</name>
       <mode>looped</mode>
@@ -689,10 +689,10 @@
         <max>1.0</max>
       </volume>
       <volume>
-         <property>/velocities/airspeed-kt</property>
-         <factor>0.0015</factor>
-         <min>0.01</min>
-         <max>0.04</max>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.0015</factor>
+        <min>0.01</min>
+        <max>0.04</max>
       </volume>
       <pitch>
         <property>/velocities/airspeed-kt</property>
@@ -702,7 +702,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </wind>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -716,7 +716,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -729,7 +729,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -742,7 +742,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -756,7 +756,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -769,7 +769,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -782,7 +782,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear</name>
       <mode>in-transit</mode>
@@ -796,7 +796,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -809,7 +809,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <gear>
       <name>gear-lock</name>
       <path>Sounds/gear-lck.wav</path>
@@ -822,7 +822,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </gear>
-
+    
     <stall>
       <name>stall</name>
       <path>Aircraft/Northrop-xb35/Sounds/stall_horn.wav</path>
@@ -834,7 +834,7 @@
       <reference-dist>10.0</reference-dist>
       <max-dist>20.0</max-dist>
     </stall>
- 
+    
     <squeal>
       <name>squeal</name>
       <path>Sounds/squeal.wav</path>
@@ -866,8 +866,8 @@
         <offset>1.2</offset>
       </pitch>
     </squeal>
-
-   <rain>
+    
+    <rain>
       <name>rain</name>
       <mode>looped</mode>
       <path>Aircraft/Northrop-xb35/Sounds/rain_canopy.wav</path>
@@ -890,8 +890,8 @@
         <offset>1.0</offset>
       </pitch>
     </rain>
-
-     <crash>
+    
+    <crash>
       <name>intense ground contact</name>
       <mode>once</mode>
       <path>Sounds/crash.wav</path>
@@ -905,62 +905,62 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </crash>
-
+    
     <click>
       <name>Magnetos-off</name>
       <path>Sounds/click.wav</path>
       <condition>
-       <not>
-        <property>controls/engines/engine/magnetos</property>
-       </not>
+        <not>
+          <property>controls/engines/engine/magnetos</property>
+        </not>
       </condition>
       <volume> 
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click> 
       <name>Magnetos-R</name>
       <path>Sounds/click.wav</path>
       <condition>
-       <equals>
-        <property>controls/engines/engine/magnetos</property>
-        <value>1</value>
-       </equals>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>1</value>
+        </equals>
       </condition>
       <volume> 
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <click> 
       <name>Magnetos-L</name>
       <path>Sounds/click.wav</path>
       <condition>
-       <equals>
-        <property>controls/engines/engine/magnetos</property>
-        <value>2</value>
-       </equals>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>2</value>
+        </equals>
       </condition>
       <volume> 
         <factor>1.0</factor>
       </volume>
     </click>
-  
+    
     <click> 
       <name>Magnetos-B</name>
       <path>Sounds/click.wav</path>
       <condition>
-       <equals>
-        <property>controls/engines/engine/magnetos</property>
-        <value>3</value>
-       </equals>
+        <equals>
+          <property>controls/engines/engine/magnetos</property>
+          <value>3</value>
+        </equals>
       </condition>
       <volume> 
         <factor>1.0</factor>
       </volume>
     </click>
-
+    
     <shutdown>
       <name>shutdown</name>
       <path>Aircraft/Northrop-xb35/Sounds/CentSdown_3.wav</path>
@@ -975,16 +975,16 @@
         </greater-than>
       </condition>
     </shutdown>
-
+    
     <rumble>
       <name>rumble</name>
       <mode>looped</mode>
       <path>Sounds/rumble.wav</path>
       <condition>
         <or>
-         <property>/gear/gear[0]/wow</property>
-         <property>/gear/gear[1]/wow</property>
-         <property>/gear/gear[2]/wow</property>
+          <property>/gear/gear[0]/wow</property>
+          <property>/gear/gear[1]/wow</property>
+          <property>/gear/gear[2]/wow</property>
         </or>
         <!-- <property>/sim/current-view/internal</property> -->
       </condition>
@@ -994,30 +994,7 @@
         <factor>0.25</factor>
       </volume>
     </rumble>
-
-    <!--
-    <pump>
-      <name>fuel pump</name>
-      <mode>looped</mode>
-      <path>Aircraft/Northrop-XB35/Sounds/fuelpump.wav</path>
-      <condition>
-        <greater-than>
-          <property>systems/electrical/outputs/fuel-pump</property>
-          <value>5</value>
-        </greater-than>
-      </condition>
-      <volume>
-        <offset>0.5</offset>
-      </volume>
-      <position>
-        <x> -0.5 </x>
-        <y>  0.0 </y>
-        <z>  0.0 </z>
-      </position>
-      <reference-dist>1.0</reference-dist>
-      <max-dist>2.0</max-dist>
-    </pump>
-    -->
+    
     <squeal>
       <name>water</name>
       <path>Sounds/wave.wav</path>
@@ -1054,7 +1031,7 @@
       <reference-dist>100</reference-dist>
       <max-dist>1000</max-dist>
     </squeal>
-
+    
   </fx>
- 
+  
 </PropertyList>

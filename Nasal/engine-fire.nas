@@ -7,6 +7,4 @@ settimer(func {
 
 }, 0);
 
-var fire_dialog = gui.Dialog.new("/sim/gui/dialogs/xb35/status/dialog",
-				 "Aircraft/Northrop-xb35/Dialogs/malfunctions-dialog.xml");
-
+var fire_dialog = gui.Dialog.new("/sim/gui/dialogs/xb35/status/dialog","Aircraft/Northrop-xb35/Dialogs/malfunctions-dialog.xml");
