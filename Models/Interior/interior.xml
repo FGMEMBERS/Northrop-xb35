@@ -16,36 +16,15 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intverriere</object-name>
-    <object-name>intbulle</object-name>
-    <object-name>intbulleA</object-name>
-    <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
-    <object-name>intverriere</object-name>
-    <object-name>intbulle</object-name>
-    <object-name>intbulleA</object-name>
-    <object-name>intvitres</object-name>
-  </animation>
-
   <!-- working for Rembrandt -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <condition>
-      <property>sim/rendering/rembrandt/enabled</property>
-    </condition>
+    <inherits-from>Aircraft/Northrop-xb35/Models/Effects/Glass/glass</inherits-from>
     <object-name>intverriere</object-name>
     <object-name>intbulle</object-name>
     <object-name>intbulleA</object-name>
     <object-name>intvitres</object-name>
   </effect>
-
+  
   <!-- Tableau de bord -->
   <model>
     <path>Aircraft/Northrop-xb35/Models/Interior/Panel/panel.xml</path>
@@ -92,7 +71,7 @@
       <x-m> -6.00 </x-m>
       <y-m>  0.10 </y-m>
       <z-m>  0.38 </z-m>
-      <roll-deg>    180 </roll-deg>
+      <roll-deg> 180 </roll-deg>
     </offsets>
   </model>
 

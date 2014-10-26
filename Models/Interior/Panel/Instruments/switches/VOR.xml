@@ -9,10 +9,10 @@
     <object-name>Switch</object-name>
     <object-name>SwitchNut</object-name>
     <emission>
-      <red>   0.2 </red>
-      <green> 0.4 </green>
-      <blue>  0.8 </blue>
       <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
     </emission>
   </animation>
 
