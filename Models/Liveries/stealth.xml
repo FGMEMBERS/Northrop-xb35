@@ -7,12 +7,7 @@
     <model>
       <livery>
         <name type="string">Stealth</name>
-        <texture>Liveries/stealth.png</texture>
-        <specular>
-          <red>   0.3 </red>
-          <green> 0.3 </green>
-          <blue>  0.3 </blue>
-        </specular>
+        <texture>Liveries/1024x1024/stealth.png</texture>
         <emission>
           <red>   0.2 </red>
           <green> 0.2 </green>

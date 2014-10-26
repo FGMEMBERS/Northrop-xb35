@@ -173,9 +173,7 @@
     <object-name>CommStby</object-name>
     <object-name>NavUse</object-name>
     <object-name>NavStby</object-name>
-    <condition>
-      <property>/controls/lighting/instrument-lights</property>
-    </condition>
+    <property>/controls/lighting/instrument-lights</property>
     <emission>
       <red>   0.50 </red>
       <green> 0.25 </green>
@@ -188,9 +186,7 @@
     <object-name>Chassis</object-name>
     <object-name>CommKnobs</object-name>
     <object-name>NavKnobs</object-name>
-    <condition>
-      <property>/controls/lighting/instrument-lights</property>
-    </condition>
+    <property>/controls/lighting/instrument-lights</property>
     <emission>
       <red>   0.2 </red>
       <green> 0.1 </green>

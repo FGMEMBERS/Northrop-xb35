@@ -9,10 +9,10 @@
     <object-name>fond</object-name>
     <object-name>Switch-Starter</object-name>
     <emission>
-      <red>   1.0 </red>
-      <green> 0.2 </green>
-      <blue>  0.0 </blue>
       <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
     </emission>
   </animation>
 

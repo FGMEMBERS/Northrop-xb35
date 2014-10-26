@@ -2,11 +2,11 @@
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="Systems/views.xml">
 
     <description>Northrop XB 35 (YASim)</description>
     <author>Emmanuel BARANGER (3D/FDM), NOVOTNY Adrian (Instruments/System)</author>
-    <aircraft-version>0.1</aircraft-version>
+    <aircraft-version>0.2</aircraft-version>
     <status>Alpha</status>
 
     <fuel-fraction>1.0</fuel-fraction>
@@ -26,66 +26,64 @@
       <splash-texture>Aircraft/Northrop-xb35/xb35-splash.png</splash-texture>
     </startup>
 
+    <systems>
+      <path>Aircraft/Northrop-xb35/Systems/generic-systems.xml</path>
+      <autopilot>
+        <path>Aircraft/Northrop-xb35/Systems/autopilot.xml</path>
+      </autopilot>
+      <electrical>
+        <path>Aircraft/Northrop-xb35/Systems/electrical.xml</path>
+      </electrical>
+      <limits>
+        <file>Aircraft/Northrop-xb35/Systems/limits.xml</file>
+      </limits>
+    </systems>
+    
     <multiplay>
       <chat_display>1</chat_display>
       <generic> 
-        <int type="int" n="0">  0 </int>                                            <!-- 0 immat -->
-        <int type="int" n="1">  0 </int>                                            <!-- 1 immat -->
-        <int type="int" n="2">  0 </int>                                            <!-- 2 immat -->
-        <int type="int" n="3">  0 </int>                                            <!-- 3 immat -->
-        <int type="int" n="4">  0 </int>                                            <!-- 4 immat -->
-        <int type="int" n="5">  0 </int>                                            <!-- 5 immat -->
-        <int type="bool" n="6"> 1 </int>                                            <!-- 6 smoke/bomb/torpedo -->
-        <int type="int" n="7">  0 </int>                                            <!-- 7 color -->
-        <int type="bool" n="8" alias="/controls/lighting/nav-lights">  0 </int>     <!-- 8 nav-lights -->
-        <int type="double" n="9" alias="/sim/model/lights/beacon/state"> 0 </int>   <!-- 9 beacon-lights -->
-        <int type="double" n="10" alias="/sim/model/lights/strobe/state"> 0 </int>  <!--10 strobe-lights -->
-        <int type="bool" n="11" alias="/controls/lighting/landing-lights"> 0 </int> <!--11 landing-lights -->
-        <int n="12" alias="/controls/electric/key-pos">  0 </int>                   <!--12 key position -->
-        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
-        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
-        <float n="2" alias="/position/gear-agl-m">  0 </float>                      <!--2 altitude for MP shadow -->
+        <int n="0"    type="int">  0 </int>                                         <!-- 0 immat -->
+        <int n="1"    type="int">  0 </int>                                         <!-- 1 immat -->
+        <int n="2"    type="int">  0 </int>                                         <!-- 2 immat -->
+        <int n="3"    type="int">  0 </int>                                         <!-- 3 immat -->
+        <int n="4"    type="int">  0 </int>                                         <!-- 4 immat -->
+        <int n="5"    type="int">  0 </int>                                         <!-- 5 immat -->
+        <int n="6"    type="bool"> 1 </int>                                         <!-- 6 smoke/bomb/torpedo -->
+        <int n="7"    type="int">  0 </int>                                         <!-- 7 color -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/rpm"/>
+        <float n="5"  alias="/engines/engine[0]/cranking"/>
+        <float n="6"  alias="/engines/engine[1]/rpm"/>
+        <float n="7"  alias="/engines/engine[1]/cranking"/>
+        <float n="8"  alias="/engines/engine[2]/rpm"/>
+        <float n="9"  alias="/engines/engine[2]/cranking"/>
+        <float n="10" alias="/engines/engine[3]/rpm"/>
+        <float n="11" alias="/engines/engine[3]/cranking"/>
+        <float n="12" alias="/gear/gear[0]/wow/"/>
+        <float n="13" alias="/gear/gear[1]/wow/"/>
+        <float n="14" alias="/gear/gear[2]/wow/"/>
+        <float n="15" alias="/gear/gear[0]/rollspeed-ms"/>
+        <float n="16" alias="/gear/gear[1]/rollspeed-ms"/>
+        <float n="17" alias="/gear/gear[2]/rollspeed-ms"/>
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
       </generic>
     </multiplay>
-
-    <help>
-      <title>Northrop XB 35</title>
-      <text>
-        Start: start your engines with the brakes on by setting magnetos to both (press "}" 3 times) prime the engines with "s"
-
-        Takeoff: increase engines to full throttle, and lower flaps to one third (press "]" once). once the airplane reaches approximately 100 MPH,
-        gentry pull back on the stick.
-
-        Climb: climb on a gentle slope, maintaining full throttle, and one third flap. level out at around 15000 feet.
-
-        Landing: landing in this aircraft is quite simple. abbot then miles from the runway, you should be at around 4000-5000 feet. decrease throttle to idle, lower flaps. use your rudder to help align you with the runway, and compensate with the rudder to prevent excessive yawing. lower you gear, and touch down at just under 100 MPH. roll for a few feet, and then apply emergency brake ("B").
-
-        Dittching: ditching in the ocean is possible in this airplane. slow to just under 100MPH. raise your landing gear if it is down, and VERY gently, touch down in the water until rooster tails appear behind you. then throttle down all the way, use rudder to keep your plane stable, and make sure you keep your wings out of the water.
-      </text>
-    </help>
+    
+    <help include="Systems/help.xml"/>
 
     <menubar include="Dialogs/xb35-menu.xml"/>
 
-    <gear>
-      <brake-parking type="double">1.0</brake-parking>
-      <gear-down>1</gear-down>
-    </gear>
-
-    <systems>
-      <path>Aircraft/Northrop-xb35/Nasal/generic-systems.xml</path>
-      <autopilot>
-        <path>Aircraft/Northrop-xb35/Nasal/autopilot.xml</path>
-      </autopilot>
-      <electrical>
-        <path>Aircraft/Northrop-xb35/Nasal/electrical.xml</path>
-      </electrical>
-      <limits>
-        <file>Aircraft/Northrop-xb35/Nasal/limits.xml</file>
-      </limits>
-    </systems>
-
   </sim>
 
+  <input>
+    <keyboard include="Systems/xb35-keyboard.xml"/>
+  </input>
+  
   <systems>
     <electrical>
       <outputs>
@@ -128,6 +126,10 @@
         <magnetos>0</magnetos>
       </engine>
     </engines>
+    <gear>
+      <brake-parking type="double">1</brake-parking>
+      <gear-down>1</gear-down>
+    </gear>   
   </controls>
 
   <consumables>
@@ -161,10 +163,6 @@
       <rpm>0</rpm>
     </engine>
   </engines>
-
-  <input>
-    <keyboard include="Nasal/xb35-keyboard.xml"/>
-  </input>
 
   <nasal>
     <doors>

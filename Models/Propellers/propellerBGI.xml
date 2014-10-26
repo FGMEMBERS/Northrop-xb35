@@ -18,7 +18,14 @@
     <object-name>propblur</object-name>
   </animation>   
 
-   <!-- Mise en place des pales par défaut -->
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+  </effect>
+  
+  <!-- Mise en place des pales par défaut -->
   <animation>
     <type>select</type>
     <object-name>helice</object-name>
