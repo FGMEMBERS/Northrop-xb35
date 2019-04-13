@@ -20,3 +20,4 @@ These liveries were made by : Adrian NOVOTNY 2010
 
 Thanks to him.
 
+Green, Black Marble, and Camo White liveries by Bruce McL 2019
